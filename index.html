@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Healing Space for the Heartbroken</title>
 	<link href="style.css" rel="stylesheet">
-	<!-- <link href="reset.css" rel="stylesheet"> -->
+	<link href="reset.css" rel="stylesheet">
 </head>
 <body>
 	<div class="container">
@@ -21,5 +21,1020 @@
 			<p>Breakups are new beginnings, not endings.</p>
 		</div>
 	</div>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healing Space</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(90deg, #ffffff, #f8e1e7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-style: italic;
+        }
+        
+        .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            font-weight: 300;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .main-content {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .left-panel {
+            flex: 1;
+        }
+        
+        .message-box {
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            margin-bottom: 30px;
+        }
+        
+        .message-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .message-title {
+            font-size: 1.3rem;
+            color: #e84e7b;
+            margin-bottom: 10px;
+            font-weight: 600;
+            text-align: left;
+        }
+        
+        textarea {
+            width: 100%;
+            min-height: 200px;
+            border: none;
+            outline: none;
+            font-size: 1.1rem;
+            color: #333;
+            resize: none;
+            background: transparent;
+            line-height: 1.8;
+            padding: 10px;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+        }
+        
+        .btn {
+            padding: 15px 20px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            flex: 1;
+            color: white;
+            font-weight: 500;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+        }
+        
+        .btn-save {
+            background: linear-gradient(45deg, #e84e7b, #ff4b77);
+        }
+        
+        .btn-release {
+            background: linear-gradient(45deg, #1DB954, #1ed760); /* Spotify green */
+        }
+        
+        .btn-comfort {
+            background: linear-gradient(45deg, #4CAF50, #66BB6A);
+        }
+        
+        .right-panel {
+            width: 300px;
+        }
+        
+        .saved-entries {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            height: 100%;
+        }
+        
+        .saved-entries-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            padding-bottom: 10px;
+        }
+        
+        .entry-list {
+            max-height: 350px;
+            overflow-y: auto;
+        }
+        
+        .entry-item {
+            background: rgba(255, 255, 255, 0.2);
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        
+        .entry-item:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        .entry-date {
+            font-size: 0.8rem;
+            opacity: 0.8;
+            margin-bottom: 5px;
+        }
+        
+        .entry-text {
+            line-height: 1.5;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        .no-entries {
+            text-align: center;
+            padding: 20px;
+            color: rgba(255, 255, 255, 0.7);
+            font-style: italic;
+        }
+        
+        .main-quote {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.7rem;
+            margin-top: 30px;
+            font-weight: 300;
+            font-style: italic;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        /* Music section - directly on page */
+        .music-section {
+            display: none;
+            margin-top: 20px;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .spotify-embed {
+            width: 100%;
+            height: 80px;
+            border-radius: 12px;
+            border: none;
+            margin-top: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            overflow: auto;
+        }
+        
+        .modal-content {
+            background: white;
+            margin: 5% auto;
+            padding: 30px;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 20px;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+            color: #333;
+            position: relative;
+            animation: modalOpen 0.4s;
+        }
+        
+        @keyframes modalOpen {
+            from {opacity: 0; transform: translateY(-20px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+        
+        .close {
+            position: absolute;
+            right: 20px;
+            top: 15px;
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .close:hover {
+            color: #e84e7b;
+        }
+        
+        .modal-title {
+            font-family: 'Playfair Display', serif;
+            color: #e84e7b;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+            padding-bottom: 10px;
+        }
+        
+        /* Quote Modal */
+        .modal-quote {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.7rem;
+            margin: 30px 0;
+            font-weight: 500;
+            font-style: italic;
+            color: #333;
+            text-align: center;
+            line-height: 1.5;
+        }
+        
+        .quote-author {
+            font-size: 1.1rem;
+            color: #777;
+            font-style: italic;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        /* Button in modal */
+        .modal-btn {
+            display: block;
+            margin: 0 auto;
+            padding: 12px 25px;
+            background: linear-gradient(45deg, #4CAF50, #66BB6A);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .modal-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Loading spinner for quotes */
+        .loading-spinner {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            margin: 20px auto;
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            border-top-color: #4CAF50;
+            animation: spin 1s ease-in-out infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* No songs found message */
+        .no-songs-message {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            background: white;
+            border-radius: 10px;
+            font-style: italic;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 900px) {
+            .main-content {
+                flex-direction: column;
+            }
+            
+            .right-panel {
+                width: 100%;
+            }
+            
+            .saved-entries {
+                margin-bottom: 30px;
+            }
+            
+            h1 {
+                font-size: 3rem;
+            }
+            
+            .modal-quote {
+                font-size: 1.4rem;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .button-group {
+                flex-direction: column;
+            }
+            
+            .modal-quote {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Healing Space for the Heartbroken</h1>
+            <p class="subtitle">Write down your feelings, release your emotions, and find comfort in your healing journey.</p>
+        </header>
+        
+        <div class="main-content">
+            <div class="left-panel">
+                <div class="message-box">
+                    <h3 class="message-title">What's on your mind today?</h3>
+                    <textarea id="heartbreak-message" placeholder="Share your feelings here..."></textarea>
+                </div>
+                
+                <div class="button-group">
+                    <button class="btn btn-save" id="saveBtn">
+                        Save Feelings
+                    </button>
+                    <button class="btn btn-release" id="releaseBtn">
+                        Release Emotions
+                    </button>
+                    <button class="btn btn-comfort" id="comfortBtn">
+                        Find Comfort
+                    </button>
+                </div>
+                
+                <!-- Music section - showing direct Spotify player -->
+                <div id="music-section" class="music-section">
+                    <iframe id="spotify-player" class="spotify-embed" src="" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                </div>
+            </div>
+            
+            <div class="right-panel">
+                <div class="saved-entries">
+                    <h3 class="saved-entries-title">Saved Journals</h3>
+                    <div id="entry-list" class="entry-list">
+                        <div class="no-entries" id="noEntries">No entries yet. Your saved feelings will appear here.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <p class="main-quote" id="main-quote">Breakups are new beginnings, not endings.</p>
+    </div>
+    
+    <!-- Save Success Modal -->
+    <div id="saveModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 class="modal-title">Journal Saved</h2>
+            <p>Your feelings have been safely recorded.</p>
+        </div>
+    </div>
+    
+    <!-- Quote Modal -->
+    <div id="quoteModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 class="modal-title">Words of Comfort</h2>
+            <p class="modal-quote" id="modalQuote">Every heartbreak is an opportunity for growth, though painful, it will make you stronger.</p>
+            <p class="quote-author" id="quoteAuthor">— Life Lessons</p>
+            <div id="quote-loading" class="loading-spinner" style="display: none;"></div>
+            <button class="modal-btn" id="nextQuoteBtn">Another Quote</button>
+        </div>
+    </div>
+
+    <script>
+        // DOM Elements
+        const saveBtn = document.getElementById('saveBtn');
+        const releaseBtn = document.getElementById('releaseBtn');
+        const comfortBtn = document.getElementById('comfortBtn');
+        const heartbreakMessage = document.getElementById('heartbreak-message');
+        const entryList = document.getElementById('entry-list');
+        const noEntries = document.getElementById('noEntries');
+        const saveModal = document.getElementById('saveModal');
+        const quoteModal = document.getElementById('quoteModal');
+        const musicSection = document.getElementById('music-section');
+        const modalQuote = document.getElementById('modalQuote');
+        const quoteAuthor = document.getElementById('quoteAuthor');
+        const nextQuoteBtn = document.getElementById('nextQuoteBtn');
+        const spotifyPlayer = document.getElementById('spotify-player');
+        const quoteLoading = document.getElementById('quote-loading');
+        const mainQuote = document.getElementById('main-quote');
+        
+        // Song Database with keyword matching
+        const songDatabase = [
+            {
+                title: "Someone Like You",
+                artist: "Adele",
+                uri: "spotify:track:4w9XPIPVO3XImZF6FGBVsP",
+                keywords: ["miss", "ex", "over", "move on", "past", "adele", "heartbreak", "sad", "lost"]
+            },
+            {
+                title: "Fix You",
+                artist: "Coldplay",
+                uri: "spotify:track:4RCWB3V8V0dignt99LZ8vH",
+                keywords: ["broken", "fix", "help", "support", "healing", "coldplay", "better", "hope"]
+            },
+            {
+                title: "Unbreak My Heart",
+                artist: "Toni Braxton",
+                uri: "spotify:track:6zAiRKvAMlXHxEtyO4yxIO",
+                keywords: ["broken", "heart", "unbreak", "pain", "hurt", "toni braxton", "sad", "crying"]
+            },
+            {
+                title: "Gravity",
+                artist: "Sara Bareilles",
+                uri: "spotify:track:4NwB41BO2wh5eSNwvmH2zQ",
+                keywords: ["pull", "back", "cant", "let go", "toxic", "relationship", "sara bareilles", "stuck"]
+            },
+            {
+                title: "Breathe Me",
+                artist: "Sia",
+                uri: "spotify:track:57bgtoPSgt236HzfBOd8kj",
+                keywords: ["lost", "help", "alone", "sad", "sia", "lonely", "small", "breathing"]
+            },
+            {
+                title: "All Too Well",
+                artist: "Taylor Swift",
+                uri: "spotify:track:4rHZZAmHpZrA3iH5zx8frV",
+                keywords: ["remember", "memories", "past", "taylor swift", "scarf", "fall", "autumn", "miss"]
+            },
+            {
+                title: "Hello",
+                artist: "Adele",
+                uri: "spotify:track:4sPmO7WMQUAf45kwMOtONw",
+                keywords: ["hello", "call", "phone", "adele", "years", "past", "sorry", "miss", "communication"]
+            },
+            {
+                title: "Stay With Me",
+                artist: "Sam Smith",
+                uri: "spotify:track:5Nm9ERjJZ5oyfXZTECKmRt",
+                keywords: ["stay", "leave", "night", "sam smith", "lonely", "alone", "please", "need"]
+            },
+            {
+                title: "Skinny Love",
+                artist: "Bon Iver",
+                uri: "spotify:track:2k0lx0jzfJ2CJEfqsB7gj3",
+                keywords: ["fading", "love", "weak", "bon iver", "dying", "skinny", "end", "patient"]
+            },
+            {
+                title: "Back To Black",
+                artist: "Amy Winehouse",
+                uri: "spotify:track:3GCdLUSnKSMJhs4Tj6CV3s",
+                keywords: ["black", "dark", "depression", "amy winehouse", "gone", "leaving", "alcohol"]
+            },
+            {
+                title: "Irreplaceable",
+                artist: "Beyoncé",
+                uri: "spotify:track:6RX5GhZBrxlkUZKs60shRv",
+                keywords: ["left", "box", "leaving", "beyonce", "replace", "moving on", "strong", "independence"]
+            },
+            {
+                title: "We Are Never Ever Getting Back Together",
+                artist: "Taylor Swift",
+                uri: "spotify:track:5YqltLsjdqFtvqE7Nrysvs",
+                keywords: ["never", "back", "together", "taylor swift", "over", "done", "final", "breakup"]
+            },
+            {
+                title: "I Will Always Love You",
+                artist: "Whitney Houston",
+                uri: "spotify:track:4eHbdreAnSOrDDsFfc4Fpm",
+                keywords: ["always", "love", "forever", "whitney houston", "goodbye", "leaving", "bittersweet"]
+            },
+            {
+                title: "Nothing Compares 2 U",
+                artist: "Sinéad O'Connor",
+                uri: "spotify:track:1alQNyYZQHQScFeyJcswq4",
+                keywords: ["nothing", "compare", "sinead", "missing", "gone", "days", "crying", "tears"]
+            },
+            {
+                title: "Don't Speak",
+                artist: "No Doubt",
+                uri: "spotify:track:6urCAbunOQI9AY13Platqn",
+                keywords: ["silence", "speak", "words", "no doubt", "gwen stefani", "hurt", "real", "ending"]
+            },
+            {
+                title: "Tears Dry On Their Own",
+                artist: "Amy Winehouse",
+                uri: "spotify:track:7MDfN8XCzZJUMvJ0hA8yF9",
+                keywords: ["tears", "cry", "dry", "amy winehouse", "stronger", "moving on", "recovery"]
+            },
+            {
+                title: "Stronger",
+                artist: "Kelly Clarkson",
+                uri: "spotify:track:6v8XH9LRG6ytrMjjXmIx8M",
+                keywords: ["stronger", "kill", "kelly clarkson", "alone", "fighter", "better", "without"]
+            },
+            {
+                title: "Dancing On My Own",
+                artist: "Robyn",
+                uri: "spotify:track:0pxNyJJiL2zX3XlUQqCmAg",
+                keywords: ["dancing", "alone", "corner", "robyn", "watching", "moved on", "new", "see"]
+            },
+            {
+                title: "Praying",
+                artist: "Kesha",
+                uri: "spotify:track:0jdny0dhgjUwoIp5GkqEaA",
+                keywords: ["pray", "hope", "kesha", "forgiveness", "peace", "healing", "better", "abuse"]
+            },
+            {
+                title: "Hurt",
+                artist: "Christina Aguilera",
+                uri: "spotify:track:6CIY8DVjkUhcv4ExVVQniy",
+                keywords: ["hurt", "pain", "sorry", "christina aguilera", "apology", "regret", "too late"]
+            }
+        ];
+        
+        // Quote database with keyword matching from BrainyQuote
+        const quoteDatabase = [
+            {
+                text: "Sometimes good things fall apart so better things can fall together.",
+                author: "Marilyn Monroe",
+                keywords: ["fall apart", "better", "together", "breakup", "hope", "positive"]
+            },
+            {
+                text: "The heart was made to be broken.",
+                author: "Oscar Wilde",
+                keywords: ["heart", "broken", "heartbreak", "pain", "inevitable"]
+            },
+            {
+                text: "It is strange how often a heart must be broken before the years can make it wise.",
+                author: "Sara Teasdale",
+                keywords: ["heart", "broken", "wise", "years", "growth", "learning", "heartbreak"]
+            },
+            {
+                text: "You yourself, as much as anybody in the entire universe, deserve your love and affection.",
+                author: "Buddha",
+                keywords: ["self-love", "deserve", "affection", "yourself", "healing", "worth"]
+            },
+            {
+                text: "To love oneself is the beginning of a lifelong romance.",
+                author: "Oscar Wilde",
+                keywords: ["love", "self-love", "romance", "beginning", "yourself"]
+            },
+            {
+                text: "The wound is the place where the Light enters you.",
+                author: "Rumi",
+                keywords: ["wound", "light", "healing", "pain", "growth", "wisdom"]
+            },
+            {
+                text: "Healing takes courage, and we all have courage, even if we have to dig a little to find it.",
+                author: "Tori Amos",
+                keywords: ["healing", "courage", "strength", "find", "recovery"]
+            },
+            {
+                text: "Don't cry because it's over, smile because it happened.",
+                author: "Dr. Seuss",
+                keywords: ["cry", "smile", "over", "happened", "moving on", "positive", "past"]
+            },
+            {
+                text: "Moving on, is a simple thing, what it leaves behind is hard.",
+                author: "Dave Mustaine",
+                keywords: ["moving on", "leave behind", "hard", "difficult", "past"]
+            },
+            {
+                text: "Hope is being able to see that there is light despite all of the darkness.",
+                author: "Desmond Tutu",
+                keywords: ["hope", "light", "darkness", "see", "future", "positive"]
+            },
+            {
+                text: "You never know how strong you are until being strong is your only choice.",
+                author: "Bob Marley",
+                keywords: ["strong", "strength", "choice", "resilience", "only"]
+            },
+            {
+                text: "Tears come from the heart and not from the brain.",
+                author: "Leonardo da Vinci",
+                keywords: ["tears", "heart", "brain", "cry", "emotion", "sad"]
+            },
+            {
+                text: "The word 'happy' would lose its meaning if it were not balanced by sadness.",
+                author: "Carl Jung",
+                keywords: ["happy", "sad", "balance", "meaning", "emotion"]
+            },
+            {
+                text: "Being deeply loved by someone gives you strength, while loving someone deeply gives you courage.",
+                author: "Lao Tzu",
+                keywords: ["love", "strength", "courage", "deeply", "relationship"]
+            },
+            {
+                text: "Love yourself first and everything else falls into line.",
+                author: "Lucille Ball",
+                keywords: ["love", "yourself", "first", "self-love", "priority"]
+            },
+            {
+                text: "Pain is inevitable. Suffering is optional.",
+                author: "Buddhist Proverb",
+                keywords: ["pain", "suffering", "inevitable", "optional", "choice"]
+            },
+            {
+                text: "Turn your wounds into wisdom.",
+                author: "Oprah Winfrey",
+                keywords: ["wounds", "wisdom", "turn", "transform", "growth", "healing"]
+            },
+            {
+                text: "The greatest step towards a life of simplicity is to learn to let go.",
+                author: "Steve Maraboli",
+                keywords: ["let go", "simplicity", "step", "learn", "moving on"]
+            },
+            {
+                text: "Time doesn't heal emotional pain, you need to learn how to let go.",
+                author: "Roy T. Bennett",
+                keywords: ["time", "heal", "emotional", "pain", "let go", "learn"]
+            },
+            {
+                text: "Sometimes, you need to be alone. Not to be lonely, but to enjoy your free time being yourself.",
+                author: "Anonymous",
+                keywords: ["alone", "lonely", "yourself", "free time", "enjoy", "self"]
+            }
+        ];
+        
+        // Variables to track current quotes
+        let currentQuote = null;
+        
+        // Extract keywords from text
+        function extractKeywords(text) {
+            if (!text) return [];
+            
+            // Convert to lowercase
+            text = text.toLowerCase();
+            
+            // Remove common punctuation
+            text = text.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "");
+            
+            // Split into words
+            const words = text.split(/\s+/);
+            
+            // Filter out common words (stop words)
+            const stopWords = ["i", "me", "my", "myself", "we", "our", "ours", "ourselves", "you", "your", "yours", "yourself", "yourselves", "he", "him", "his", "himself", "she", "her", "hers", "herself", "it", "its", "itself", "they", "them", "their", "theirs", "themselves", "what", "which", "who", "whom", "this", "that", "these", "those", "am", "is", "are", "was", "were", "be", "been", "being", "have", "has", "had", "having", "do", "does", "did", "doing", "a", "an", "the", "and", "but", "if", "or", "because", "as", "until", "while", "of", "at", "by", "for", "with", "about", "against", "between", "into", "through", "during", "before", "after", "above", "below", "to", "from", "up", "down", "in", "out", "on", "off", "over", "under", "again", "further", "then", "once", "here", "there", "when", "where", "why", "how", "all", "any", "both", "each", "few", "more", "most", "other", "some", "such", "no", "nor", "not", "only", "own", "same", "so", "than", "too", "very", "s", "t", "can", "will", "just", "don", "don't", "should", "now"];
+            
+            const filteredWords = words.filter(word => {
+                return word.length > 2 && !stopWords.includes(word);
+            });
+            
+            // Look for key phrases
+            const keyPhrases = ["break up", "moved on", "moving on", "self love", "self worth", "heart broken", "broken heart", "let go"];
+            
+            keyPhrases.forEach(phrase => {
+                if (text.includes(phrase)) {
+                    filteredWords.push(phrase);
+                }
+            });
+            
+            return filteredWords;
+        }
+        
+        // Find matching song based on keywords
+        function findMatchingSong(keywords) {
+            if (!keywords || keywords.length === 0) {
+                // Return a random song if no keywords
+                return songDatabase[Math.floor(Math.random() * songDatabase.length)];
+            }
+            
+            // Score songs based on keyword matches
+            const scoredSongs = songDatabase.map(song => {
+                let score = 0;
+                
+                keywords.forEach(keyword => {
+                    // Check if keyword matches song title or artist
+                    if (song.title.toLowerCase().includes(keyword) || 
+                        song.artist.toLowerCase().includes(keyword)) {
+                        score += 5;
+                    }
+                    
+                    // Check if keyword is in song's keywords
+                    if (song.keywords.some(k => k.includes(keyword) || keyword.includes(k))) {
+                        score += 3;
+                    }
+                });
+                
+                return { ...song, score };
+            });
+            
+            // Sort by score (highest first)
+            const sortedSongs = scoredSongs.sort((a, b) => b.score - a.score);
+            
+// Return the best matching song, or a random one if no matches
+if (sortedSongs[0].score > 0) {
+                return sortedSongs[0];
+            } else {
+                return songDatabase[Math.floor(Math.random() * songDatabase.length)];
+            }
+        }
+        
+        // Find matching quote based on keywords
+        function findMatchingQuote(keywords) {
+            if (!keywords || keywords.length === 0) {
+                // Return a random quote if no keywords
+                return quoteDatabase[Math.floor(Math.random() * quoteDatabase.length)];
+            }
+            
+            // Score quotes based on keyword matches
+            const scoredQuotes = quoteDatabase.map(quote => {
+                let score = 0;
+                
+                keywords.forEach(keyword => {
+                    // Check if keyword is in quote text
+                    if (quote.text.toLowerCase().includes(keyword)) {
+                        score += 3;
+                    }
+                    
+                    // Check if keyword is in quote's keywords
+                    if (quote.keywords.some(k => k.includes(keyword) || keyword.includes(k))) {
+                        score += 5;
+                    }
+                });
+                
+                return { ...quote, score };
+            });
+            
+            // Sort by score (highest first)
+            const sortedQuotes = scoredQuotes.sort((a, b) => b.score - a.score);
+            
+            // Return the best matching quote, or a random one if no matches
+            if (sortedQuotes[0].score > 0) {
+                return sortedQuotes[0];
+            } else {
+                return quoteDatabase[Math.floor(Math.random() * quoteDatabase.length)];
+            }
+        }
+        
+        // Event Listeners
+        saveBtn.onclick = function() {
+            saveEntry();
+        };
+        
+        releaseBtn.onclick = function() {
+            const text = heartbreakMessage.value;
+            const keywords = extractKeywords(text);
+            console.log("Extracted keywords for song:", keywords);
+            
+            // Find best matching song based on keywords
+            const matchingSong = findMatchingSong(keywords);
+            console.log("Selected song:", matchingSong.title, "by", matchingSong.artist);
+            
+            // Show the music section with Spotify player for this song
+            musicSection.style.display = 'block';
+            
+            // Extract track ID from URI
+            const trackId = matchingSong.uri.split(':')[2];
+            
+            // Set the iframe src to display the song
+            spotifyPlayer.src = `https://open.spotify.com/embed/track/${trackId}?utm_source=generator`;
+        };
+        
+        comfortBtn.onclick = function() {
+            const text = heartbreakMessage.value;
+            const keywords = extractKeywords(text);
+            console.log("Extracted keywords for quote:", keywords);
+            
+            // Find best matching quote based on keywords
+            const matchingQuote = findMatchingQuote(keywords);
+            console.log("Selected quote:", matchingQuote.text);
+            
+            // Show loading
+            quoteLoading.style.display = 'block';
+            modalQuote.style.display = 'none';
+            quoteAuthor.style.display = 'none';
+            
+            // Show quote modal
+            openModal(quoteModal);
+            
+            // Simulate quote loading from API
+            setTimeout(function() {
+                quoteLoading.style.display = 'none';
+                modalQuote.style.display = 'block';
+                quoteAuthor.style.display = 'block';
+                
+                // Set the current quote
+                currentQuote = matchingQuote;
+                modalQuote.textContent = currentQuote.text;
+                quoteAuthor.textContent = `— ${currentQuote.author}`;
+            }, 1000);
+        };
+        
+        nextQuoteBtn.onclick = function() {
+            // Get new keywords from text excluding already used keywords
+            const text = heartbreakMessage.value;
+            const keywords = extractKeywords(text);
+            
+            // Filter out keywords that matched the current quote
+            const filteredKeywords = keywords.filter(keyword => {
+                if (!currentQuote) return true;
+                
+                // Don't filter if the keyword isn't in the current quote's keywords
+                if (!currentQuote.keywords.some(k => k.includes(keyword) || keyword.includes(k))) {
+                    return true;
+                }
+                
+                // 50% chance to keep even if it matches (for variety)
+                return Math.random() > 0.5;
+            });
+            
+            // Find another matching quote
+            const nextQuote = findMatchingQuote(filteredKeywords);
+            
+            // Make sure we don't get the same quote again
+            if (currentQuote && nextQuote.text === currentQuote.text) {
+                // Find a different quote
+                const remainingQuotes = quoteDatabase.filter(q => q.text !== currentQuote.text);
+                currentQuote = remainingQuotes[Math.floor(Math.random() * remainingQuotes.length)];
+            } else {
+                currentQuote = nextQuote;
+            }
+            
+            // Update display
+            modalQuote.textContent = currentQuote.text;
+            quoteAuthor.textContent = `— ${currentQuote.author}`;
+        };
+        
+        // Add event listeners to all close buttons
+        const closeButtons = document.getElementsByClassName('close');
+        for (let i = 0; i < closeButtons.length; i++) {
+            closeButtons[i].onclick = function() {
+                const modal = this.closest('.modal');
+                closeModal(modal);
+            };
+        }
+        
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                closeModal(event.target);
+            }
+        };
+        
+        // Functions
+        function saveEntry() {
+            const messageText = heartbreakMessage.value.trim();
+            if (!messageText) return;
+            
+            // Remove no entries message if visible
+            if (noEntries.style.display !== 'none') {
+                noEntries.style.display = 'none';
+            }
+            
+            // Create a new entry
+            const now = new Date();
+            const formattedDate = `${now.toLocaleDateString()} ${now.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}`;
+            
+            // Create new entry HTML
+            const entryItem = document.createElement('div');
+            entryItem.className = 'entry-item';
+            entryItem.innerHTML = `
+                <div class="entry-date">${formattedDate}</div>
+                <div class="entry-text">${messageText}</div>
+            `;
+            
+            // Add to the beginning of the list
+            entryList.insertBefore(entryItem, entryList.firstChild);
+            
+            // Save to localStorage
+            saveToLocalStorage(formattedDate, messageText);
+            
+            // Get keywords and update main quote based on the entry
+            const keywords = extractKeywords(messageText);
+            const matchingQuote = findMatchingQuote(keywords);
+            mainQuote.textContent = matchingQuote.text;
+            
+            // Clear the textarea
+            heartbreakMessage.value = '';
+            
+            // Show success modal
+            openModal(saveModal);
+        }
+        
+        function saveToLocalStorage(date, text) {
+            // Get existing entries or initialize empty array
+            const existingEntries = JSON.parse(localStorage.getItem('heartbreakEntries')) || [];
+            
+            // Add new entry
+            existingEntries.unshift({
+                date: date,
+                text: text
+            });
+            
+            // Save back to localStorage
+            localStorage.setItem('heartbreakEntries', JSON.stringify(existingEntries));
+        }
+        
+        function loadEntriesFromLocalStorage() {
+            const existingEntries = JSON.parse(localStorage.getItem('heartbreakEntries')) || [];
+            
+            if (existingEntries.length === 0) {
+                return;
+            }
+            
+            // Remove no entries message
+            noEntries.style.display = 'none';
+            
+            // Add each entry to the list
+            existingEntries.forEach(entry => {
+                const entryItem = document.createElement('div');
+                entryItem.className = 'entry-item';
+                entryItem.innerHTML = `
+                    <div class="entry-date">${entry.date}</div>
+                    <div class="entry-text">${entry.text}</div>
+                `;
+                entryList.appendChild(entryItem);
+            });
+        }
+        
+        function openModal(modal) {
+            modal.style.display = 'block';
+        }
+        
+        function closeModal(modal) {
+            modal.style.display = 'none';
+        }
+        
+        // Load saved entries when page loads
+        window.addEventListener('load', function() {
+            loadEntriesFromLocalStorage();
+        });
+    </script>
 </body>
 </html>
