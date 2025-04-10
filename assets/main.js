@@ -1,10 +1,8 @@
-// // Console.founction (Learn it from 6:50/39:00  https://www.youtube.com/watch?v=0ik6X4DJKCc)
-
-// Wait for DOM to fully load before executing code
+// // Console.founction 
+//(Learn it from 6:50/39:00  https://www.youtube.com/watch?v=0ik6X4DJKCc)
 document.addEventListener('DOMContentLoaded', function() {
     console.log('DOM loaded, initializing application...');
-    
-    // DOM Elements
+
     const saveBtn = document.getElementById('saveBtn');
     const releaseBtn = document.getElementById('releaseBtn');
     const comfortBtn = document.getElementById('comfortBtn');
@@ -30,8 +28,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Variables to track current quotes
     let currentQuote = null;
     
-    // ===== GUARANTEED WORKING SONGS =====
-    // These are 100% verified to work with Spotify embed
+    // These are 100% work with Spotify embed
+    //(Sometimes will shows Page not found We can’t seem to find the page you are looking for.
     const GUARANTEED_SONGS = [
         {
             title: "Someone Like You",
@@ -86,6 +84,8 @@ document.addEventListener('DOMContentLoaded', function() {
     ];
     
     // Extract keywords from text
+    // Learn from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
+    // Learn how to: Clean up text with .replace() Split text with .split()Filter arrays with .filter()Search with .includes()
     function extractKeywords(text) {
         if (!text) return [];
         
@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         return filteredWords;
     }
-    
+
     // Get a random guaranteed song
     function getRandomGuaranteedSong() {
         return GUARANTEED_SONGS[Math.floor(Math.random() * GUARANTEED_SONGS.length)];
@@ -156,15 +156,20 @@ document.addEventListener('DOMContentLoaded', function() {
                     return { ...song, score };
                 });
                 
-                // Sort by score (highest first)
-                scoredSongs.sort((a, b) => b.score - a.score);
-            }
-            
-            // If we found a good match in the database
+    // Sort by score (highest first)
+    // learn from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+    //The sort() method of Array instances sorts the elements of an array in place and returns the reference to the same array, now sorted. 
+    scoredSongs.sort((a, b) => b.score - a.score);
+       }
+       
+    // If we found a good match in the data( Try to find the best-scored song by title or artist)
+    //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
+    //learn about Array.prototype.find() which is the method of Array instances returns the first element in the provided array that satisfies the provided testing function. If no values satisfy the testing function, undefined is returned.
+
             if (scoredSongs.length > 0 && scoredSongs[0].score > 0) {
                 console.log("Found matching song in database:", scoredSongs[0].title);
                 
-                // Look for a matching guaranteed song (artist or title)
+                // Matching guaranteed song (artist or title from database)
                 const matchedGuaranteed = GUARANTEED_SONGS.find(gs => 
                     gs.title.includes(scoredSongs[0].title) || 
                     scoredSongs[0].title.includes(gs.title) ||
@@ -181,10 +186,12 @@ document.addEventListener('DOMContentLoaded', function() {
             console.error("Error while finding matching song:", error);
         }
         
-        // Fallback to random guaranteed song
-        return getRandomGuaranteedSong();
+
+    // learn about Math.random() from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+    // Fallback to random guaranteed song
+    return getRandomGuaranteedSong();
     }
-    
+
     // Get a random quote
     function getRandomQuote() {
         if (typeof quoteDatabase !== 'undefined' && Array.isArray(quoteDatabase)) {
@@ -201,7 +208,9 @@ document.addEventListener('DOMContentLoaded', function() {
             return fallbackQuotes[Math.floor(Math.random() * fallbackQuotes.length)];
         }
     }
-    
+
+    // learn about Array.prototype.map()https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+    // The map() method goes through every item in an array, does something to each item, and returns a new array with the results.
     // Find matching quote based on keywords
     function findMatchingQuote(keywords) {
         if (!keywords || keywords.length === 0 || typeof quoteDatabase === 'undefined' || !Array.isArray(quoteDatabase)) {
@@ -243,7 +252,10 @@ document.addEventListener('DOMContentLoaded', function() {
         // Fallback to random quote
         return getRandomQuote();
     }
-    
+
+    // learn from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trim
+    // Trim is to Removes spaces from the beginning and end of a string.
+    //Date.prototype.toLocaleDateString()：Format the date and time into a readable string.
     // Functions
     function saveEntry() {
         console.log('Saving entry...');
@@ -285,6 +297,8 @@ document.addEventListener('DOMContentLoaded', function() {
         openModal(saveModal);
     }
     
+    // learn from https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+    // Window: localStorage property：ead-only property of the window interface allows you to access a Storage object for the Document's origin; the stored data is saved across browser sessions.
     function saveToLocalStorage(date, text) {
         // Get existing entries or initialize empty array
         const existingEntries = JSON.parse(localStorage.getItem('heartbreakEntries')) || [];
@@ -309,6 +323,8 @@ document.addEventListener('DOMContentLoaded', function() {
         // Remove no entries message
         noEntries.style.display = 'none';
         
+        // learnfrom https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement
+        //Document: createElement() method:createElement(localName)createElement(localName, options)
         // Add each entry to the list
         existingEntries.forEach(entry => {
             const entryItem = document.createElement('div');
@@ -410,7 +426,8 @@ document.addEventListener('DOMContentLoaded', function() {
             quoteAuthor.textContent = `— ${currentQuote.author}`;
         }, 1000);
     };
-    
+    //learn form https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event
+    //Element: click event: Use the event name in methods like addEventListener(), or set an event handler property.
     nextQuoteBtn.onclick = function() {
         // Get new keywords from text excluding already used keywords
         const text = heartbreakMessage.value;
@@ -420,6 +437,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const filteredKeywords = keywords.filter(keyword => {
             if (!currentQuote) return true;
             
+            //learn from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some
+            //Array.prototype.some() some(callbackFn)some(callbackFn, thisArg)
             // Don't filter if the keyword isn't in the current quote's keywords
             if (!currentQuote.keywords || !currentQuote.keywords.some(k => k.includes(keyword) || keyword.includes(k))) {
                 return true;
@@ -428,7 +447,9 @@ document.addEventListener('DOMContentLoaded', function() {
             // 50% chance to keep even if it matches (for variety)
             return Math.random() > 0.5;
         });
-        
+
+        //learn fromhttps://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+        //Array.prototype.filter() creates a shallow copy of a portion of a given array
         // Find another matching quote
         const nextQuote = findMatchingQuote(filteredKeywords);
         
@@ -449,7 +470,8 @@ document.addEventListener('DOMContentLoaded', function() {
         modalQuote.textContent = currentQuote.text;
         quoteAuthor.textContent = `— ${currentQuote.author}`;
     };
-    
+    //learn it from https://developer.mozilla.org/en-US/docs/Web/API/Element/closest
+    //Element: closest() method Syntaxclosest(selectors)A string of valid CSS selectors to match the Element and its ancestors against.
     // Add event listeners to all close buttons
     const closeButtons = document.getElementsByClassName('close');
     for (let i = 0; i < closeButtons.length; i++) {
@@ -458,7 +480,9 @@ document.addEventListener('DOMContentLoaded', function() {
             closeModal(modal);
         };
     }
-    
+
+    //learn it from https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
+    //Element: classList property: read-only property that returns a live DOMTokenList collection of the class attributes of the element. This can then be used to manipulate the class list.
     // Close modal when clicking outside
     window.onclick = function(event) {
         if (event.target.classList.contains('modal')) {
