@@ -489,9 +489,4 @@ document.addEventListener('DOMContentLoaded', function() {
             closeModal(event.target);
         }
     };
-    
-    // Load saved entries when page loads
-    loadEntriesFromLocalStorage();
-    
-    console.log('Application initialized successfully');
 });
