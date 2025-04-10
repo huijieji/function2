@@ -1,86 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Healing Space for the Heartbroken</title>
-	<link href="assets/style.css" rel="stylesheet">
-	<link href="assets/reset.css" rel="stylesheet">
-	<script defer src="healing.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healing Space</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Josefin+Sans:wght@300;400;500;600&family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Pacifico&display=swap" rel="stylesheet">
+    <link href="assets/reset.css" rel="stylesheet">
+    <link href="assets/style.css" rel="stylesheet">
 </head>
 <body>
-    <body>
-        <div class="container">
-            <div class="sparkle sparkle-1"></div>
-            <div class="sparkle sparkle-2"></div>
-            <div class="collage-element element-1"></div>
-            <div class="collage-element element-2"></div>
-
-            <header>
-                <h1>Healing Space for the Heartbroken</h1>
-                <p class="subtitle">Write down your feelings, release your emotions, and find comfort in your healing journey.</p>
-            </header>
-            
-            <div class="main-content">
-                <div class="sticker sticker-1">perfect blend of healing</div>
-                <div class="left-panel">
-                    <div class="message-box">
-                        <h3 class="message-title">What's on your mind today?</h3>
-                        <textarea id="heartbreak-message" placeholder="Share your feelings here..."></textarea>
-                    </div>
-                    
-                    <div class="button-group">
-                        <button class="btn btn-save" id="saveBtn">
-                            Save Feelings
-                        </button>
-                        <button class="btn btn-release" id="releaseBtn">
-                            Release Emotions
-                        </button>
-                        <button class="btn btn-comfort" id="comfortBtn">
-                            Find Comfort
-                        </button>
-                    </div>
-                    
-                    Music section
-                    <div id="music-section" class="music-section">
-                        <iframe id="spotify-player" class="spotify-embed" src="" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-                    </div>
+    <div class="container">
+        <div class="sparkle sparkle-1"></div>
+        <div class="sparkle sparkle-2"></div>
+        <div class="collage-element element-1"></div>
+        <div class="collage-element element-2"></div>
+        
+        <header>
+            <h1>Healing Space for the Heartbroken</h1>
+            <p class="subtitle">Write down your feelings, release your emotions, and find comfort in your healing journey.</p>
+        </header>
+        
+        <div class="main-content">
+            <div class="sticker sticker-1">perfect blend of healing</div>
+            <div class="left-panel">
+                <div class="message-box">
+                    <h3 class="message-title">What's on your mind today?</h3>
+                    <textarea id="heartbreak-message" placeholder="Share your feelings here... (Press Ctrl+Enter to save)"></textarea>
                 </div>
                 
-                <div class="right-panel">
-                    <div class="saved-entries">
-                        <h3 class="saved-entries-title">Saved Journals</h3>
-                        <div id="entry-list" class="entry-list">
-                            <div class="no-entries" id="noEntries">No entries yet. Your saved feelings will appear here.</div>
-                        </div>
-                    </div>
+                <div class="button-group">
+                    <button class="btn btn-save" id="saveBtn">
+                        Save Feelings
+                    </button>
+                    <button class="btn btn-release" id="releaseBtn">
+                        Release Emotions
+                    </button>
+                    <button class="btn btn-comfort" id="comfortBtn">
+                        Find Comfort
+                    </button>
                 </div>
-                <div class="sticker sticker-2">you've been struck with love</div>
+                
+                <!-- Music section - showing direct Spotify player -->
+                <div id="music-section" class="music-section">
+                    <h3 class="music-title">Music for Your Soul</h3>
+                    <iframe id="spotify-player" class="spotify-embed" src="" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                </div>
             </div>
             
-            <p class="main-quote" id="main-quote">Breakups are new beginnings, not endings.</p>
+            <div class="right-panel">
+                <div class="saved-entries">
+                    <h3 class="saved-entries-title">Saved Journals</h3>
+                    <div id="entry-list" class="entry-list">
+                        <div class="no-entries" id="noEntries">No entries yet. Your saved feelings will appear here.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="sticker sticker-2">you've been struck with love</div>
         </div>
         
-        Save Success Modal
-        <div id="saveModal" class="modal">
-            <div class="modal-content">
-                <span class="close">time;</span>
-                <h2 class="modal-title">Journal Saved</h2>
-                <p>Your feelings have been safely recorded.</p>
-            </div>
+        <p class="main-quote" id="main-quote">Breakups are new beginnings, not endings.</p>
+    </div>
+    
+    <!-- Save Success Modal -->
+    <div id="saveModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 class="modal-title">Journal Saved</h2>
+            <p>Your feelings have been safely recorded.</p>
+            <button class="modal-btn" id="saveDoneBtn">Done</button>
         </div>
-        
-        Quotation
-        <div id="quoteModal" class="modal">
-            <div class="modal-content">
-                <span class="close">time;</span>
-                <h2 class="modal-title">Words of Comfort</h2>
-                <p class="modal-quote" id="modalQuote">Every heartbreak is an opportunity for growth, though painful, it will make you stronger.</p>
-                <p class="quote-author" id="quoteAuthor">— Life Lessons</p>
-                <div id="quote-loading" class="loading-spinner" style="display: none;"></div>
-                <button class="modal-btn" id="nextQuoteBtn">Another Quote</button>
-            </div>
+    </div>
+    
+    <!-- Quote Modal -->
+    <div id="quoteModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 class="modal-title">Words of Comfort</h2>
+            <p class="modal-quote" id="modalQuote">Every heartbreak is an opportunity for growth, though painful, it will make you stronger.</p>
+            <p class="quote-author" id="quoteAuthor">— Life Lessons</p>
+            <div id="quote-loading" class="loading-spinner" style="display: none;"></div>
+            <button class="modal-btn" id="nextQuoteBtn">Another Quote</button>
         </div>
+    </div>
+    
+    <!-- Load JavaScript -->
+    <script src="assets/healing.js"></script>
 </body>
 </html>
-

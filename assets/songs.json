@@ -1,240 +1,154 @@
-This JSON dataset was AI-generated for educational and demonstration purposes.
-Content from Sportify
-{
-	"songs": [
-	  {
-		"title": "Someone Like You",
-		"artist": "Adele",
-		"uri": "spotify:track:4w9XPIPVO3XImZF6FGBVsP",
-		"keywords": ["miss", "ex", "over", "move on", "past", "adele", "heartbreak", "sad", "lost"]
-	  },
-	  {
-		"title": "Hello",
-		"artist": "Adele",
-		"uri": "spotify:track:4sPmO7WMQUAf45kwMOtONw",
-		"keywords": ["hello", "call", "phone", "adele", "years", "past", "sorry", "miss", "communication"]
-	  },
-	  {
-		"title": "Rolling in the Deep",
-		"artist": "Adele",
-		"uri": "spotify:track:7h2yhVxcZOGyQdOwD4Hu8J",
-		"keywords": ["revenge", "fire", "adele", "hurt", "deep", "heart", "scars", "pain"]
-	  },
-	  {
-		"title": "Fix You",
-		"artist": "Coldplay",
-		"uri": "spotify:track:4RCWB3V8V0dignt99LZ8vH",
-		"keywords": ["broken", "fix", "help", "support", "healing", "coldplay", "better", "hope"]
-	  },
-	  {
-		"title": "The Scientist",
-		"artist": "Coldplay",
-		"uri": "spotify:track:75JFxkI2RXiU7L9VXzMkle",
-		"keywords": ["begin", "start", "questions", "coldplay", "apart", "separate", "science", "logic"]
-	  },
-	  {
-		"title": "Yellow",
-		"artist": "Coldplay",
-		"uri": "spotify:track:3AJwUDP919kvQ9QcozQPxg",
-		"keywords": ["love", "stars", "coldplay", "beautiful", "shine", "glow", "yellow", "devotion"]
-	  },
-	  {
-		"title": "Unbreak My Heart",
-		"artist": "Toni Braxton",
-		"uri": "spotify:track:6zAiRKvAMlXHxEtyO4yxIO",
-		"keywords": ["broken", "heart", "unbreak", "pain", "hurt", "toni braxton", "sad", "crying"]
-	  },
-	  {
-		"title": "Nothing Compares 2 U",
-		"artist": "Sinéad O'Connor",
-		"uri": "spotify:track:1alQNyYZQHQScFeyJcswq4",
-		"keywords": ["nothing", "compare", "sinead", "missing", "gone", "days", "crying", "tears"]
-	  },
-	  {
-		"title": "I Will Always Love You",
-		"artist": "Whitney Houston",
-		"uri": "spotify:track:4eHbdreAnSOrDDsFfc4Fpm",
-		"keywords": ["always", "love", "forever", "whitney houston", "goodbye", "leaving", "bittersweet"]
-	  },
-	  {
-		"title": "All Too Well",
-		"artist": "Taylor Swift",
-		"uri": "spotify:track:4rHZZAmHpZrA3iH5zx8frV",
-		"keywords": ["remember", "memories", "past", "taylor swift", "scarf", "fall", "autumn", "miss"]
-	  },
-	  {
-		"title": "We Are Never Ever Getting Back Together",
-		"artist": "Taylor Swift",
-		"uri": "spotify:track:5YqltLsjdqFtvqE7Nrysvs",
-		"keywords": ["never", "back", "together", "taylor swift", "over", "done", "final", "breakup"]
-	  },
-	  {
-		"title": "Back To December",
-		"artist": "Taylor Swift",
-		"uri": "spotify:track:4LR1LWMaTXlSoHQKUPb7jz",
-		"keywords": ["regret", "sorry", "december", "taylor swift", "apology", "guilt", "cold", "winter"]
-	  },
-	  {
-		"title": "Blank Space",
-		"artist": "Taylor Swift",
-		"uri": "spotify:track:1u8c2t2Cy7UBoG4ArRcF5g",
-		"keywords": ["dating", "love", "toxic", "taylor swift", "games", "play", "crazy", "obsession"]
-	  },
-	  {
-		"title": "Stay With Me",
-		"artist": "Sam Smith",
-		"uri": "spotify:track:5Nm9ERjJZ5oyfXZTECKmRt",
-		"keywords": ["stay", "leave", "night", "sam smith", "lonely", "alone", "please", "need"]
-	  },
-	  {
-		"title": "Gravity",
-		"artist": "Sara Bareilles",
-		"uri": "spotify:track:4NwB41BO2wh5eSNwvmH2zQ",
-		"keywords": ["pull", "back", "cant", "let go", "toxic", "relationship", "sara bareilles", "stuck"]
-	  },
-	  {
-		"title": "Dancing On My Own",
-		"artist": "Robyn",
-		"uri": "spotify:track:0pxNyJJiL2zX3XlUQqCmAg",
-		"keywords": ["dancing", "alone", "corner", "robyn", "watching", "moved on", "new", "see"]
-	  },
-	  {
-		"title": "Irreplaceable",
-		"artist": "Beyoncé",
-		"uri": "spotify:track:6RX5GhZBrxlkUZKs60shRv",
-		"keywords": ["left", "box", "leaving", "beyonce", "replace", "moving on", "strong", "independence"]
-	  },
-	  {
-		"title": "Skinny Love",
-		"artist": "Bon Iver",
-		"uri": "spotify:track:2k0lx0jzfJ2CJEfqsB7gj3",
-		"keywords": ["fading", "love", "weak", "bon iver", "dying", "skinny", "end", "patient"]
-	  },
-	  {
-		"title": "Breathe Me",
-		"artist": "Sia",
-		"uri": "spotify:track:57bgtoPSgt236HzfBOd8kj",
-		"keywords": ["lost", "help", "alone", "sad", "sia", "lonely", "small", "breathing"]
-	  },
-	  {
-		"title": "Chasing Cars",
-		"artist": "Snow Patrol",
-		"uri": "spotify:track:0snQkGI5qnAmohLE7jTsTn",
-		"keywords": ["forget", "world", "snow patrol", "simple", "moment", "lying", "honest", "together"]
-	  },
-	  {
-		"title": "Fake Plastic Trees",
-		"artist": "Radiohead",
-		"uri": "spotify:track:0SiywuOBRcynK0uKGWdCnn",
-		"keywords": ["fake", "plastic", "radiohead", "wear out", "tired", "gravity", "bringing down", "hollow"]
-	  },
-	  {
-		"title": "Back To Black",
-		"artist": "Amy Winehouse",
-		"uri": "spotify:track:3GCdLUSnKSMJhs4Tj6CV3s",
-		"keywords": ["black", "dark", "depression", "amy winehouse", "gone", "leaving", "alcohol"]
-	  },
-	  {
-		"title": "Tears Dry On Their Own",
-		"artist": "Amy Winehouse",
-		"uri": "spotify:track:7MDfN8XCzZJUMvJ0hA8yF9",
-		"keywords": ["tears", "cry", "dry", "amy winehouse", "stronger", "moving on", "recovery"]
-	  },
-	  {
-		"title": "Love Is A Losing Game",
-		"artist": "Amy Winehouse",
-		"uri": "spotify:track:3FtYbEfBqAlGO46NUDQSAt",
-		"keywords": ["love", "losing", "game", "amy winehouse", "odds", "burned", "flame", "ashes"]
-	  },
-	  {
-		"title": "Stronger",
-		"artist": "Kelly Clarkson",
-		"uri": "spotify:track:6v8XH9LRG6ytrMjjXmIx8M",
-		"keywords": ["stronger", "kill", "kelly clarkson", "alone", "fighter", "better", "without"]
-	  },
-	  {
-		"title": "Praying",
-		"artist": "Kesha",
-		"uri": "spotify:track:0jdny0dhgjUwoIp5GkqEaA",
-		"keywords": ["pray", "hope", "kesha", "forgiveness", "peace", "healing", "better", "abuse"]
-	  },
-	  {
-		"title": "Survivor",
-		"artist": "Destiny's Child",
-		"uri": "spotify:track:2TA2pXxADJ86peBKVdaGjX",
-		"keywords": ["survive", "better", "destiny's child", "stronger", "without", "thought", "wrong"]
-	  },
-	  {
-		"title": "Roar",
-		"artist": "Katy Perry",
-		"uri": "spotify:track:27tNWlhdAryQY04vN4ylcZ",
-		"keywords": ["roar", "fighter", "katy perry", "champion", "own", "voice", "loud", "fierce"]
-	  },
-	  {
-		"title": "Don't Speak",
-		"artist": "No Doubt",
-		"uri": "spotify:track:6urCAbunOQI9AY13Platqn",
-		"keywords": ["silence", "speak", "words", "no doubt", "gwen stefani", "hurt", "real", "ending"]
-	  },
-	  {
-		"title": "Hurt",
-		"artist": "Christina Aguilera",
-		"uri": "spotify:track:6CIY8DVjkUhcv4ExVVQniy",
-		"keywords": ["hurt", "pain", "sorry", "christina aguilera", "apology", "regret", "too late"]
-	  },
-	  {
-		"title": "Everybody Hurts",
-		"artist": "R.E.M.",
-		"uri": "spotify:track:4dSKGZ1LvdRVOiN9nUEtj4",
-		"keywords": ["hurt", "everybody", "REM", "hold on", "day", "sometimes", "feel", "alone"]
-	  },
-	  {
-		"title": "Creep",
-		"artist": "Radiohead",
-		"uri": "spotify:track:6b2oQwSGFkzsMtQruIWm2p",
-		"keywords": ["creep", "weirdo", "radiohead", "belong", "special", "perfect", "wish", "notice"]
-	  },
-	  {
-		"title": "drivers license",
-		"artist": "Olivia Rodrigo",
-		"uri": "spotify:track:7lPN2DXiMsVn7XUKtOW1CS",
-		"keywords": ["driving", "license", "olivia rodrigo", "blonde", "suburbs", "car", "past", "memories"]
-	  },
-	  {
-		"title": "Easy On Me",
-		"artist": "Adele",
-		"uri": "spotify:track:46IZ0fSY2mpAiktS3KOqds",
-		"keywords": ["easy", "adele", "change", "child", "river", "deep", "drown", "feelings"]
-	  },
-	  {
-		"title": "Happier Than Ever",
-		"artist": "Billie Eilish",
-		"uri": "spotify:track:4RVwu0g32PAqgUiJoXsdF8",
-		"keywords": ["happier", "billie eilish", "never", "treat", "care", "call", "problems", "anger"]
-	  },
-	  {
-		"title": "traitor",
-		"artist": "Olivia Rodrigo",
-		"uri": "spotify:track:5CZ40GBx1sQ9agT82CLQCT",
-		"keywords": ["traitor", "cheater", "olivia rodrigo", "friends", "dating", "betrayal", "trust", "broken"]
-	  },
-	  {
-		"title": "Wicked Game",
-		"artist": "Chris Isaak",
-		"uri": "spotify:track:7w5AOd6HrylPOGv1amWpMI",
-		"keywords": ["wicked", "game", "chris isaak", "fall", "love", "world", "fire", "burn"]
-	  },
-	  {
-		"title": "Hallelujah",
-		"artist": "Jeff Buckley",
-		"uri": "spotify:track:20wkVLutqVOYrc4ZkMvKqX",
-		"keywords": ["hallelujah", "jeff buckley", "broken", "throne", "love", "chord", "secret", "holy"]
-	  },
-	  {
-		"title": "Unchained Melody",
-		"artist": "The Righteous Brothers",
-		"uri": "spotify:track:6C4LXC9UFH1IKiHYOp0BiJ",
-		"keywords": ["time", "melody", "righteous brothers", "lonely", "wait", "need", "love", "longing"]
-	  }
-	]
-  }
+// This JSON dataset was AI-generated for educational and demonstration purposes.
+// Content from Sportify
+[
+	{
+	  "title": "Someone Like You",
+	  "artist": "Adele",
+	  "uri": "spotify:track:4w9XPIPVO3XImZF6FGBVsP",
+	  "keywords": ["miss", "ex", "over", "move on", "past", "adele", "heartbreak", "sad", "lost"]
+	},
+	{
+	  "title": "Fix You",
+	  "artist": "Coldplay",
+	  "uri": "spotify:track:4RCWB3V8V0dignt99LZ8vH",
+	  "keywords": ["broken", "fix", "help", "support", "healing", "coldplay", "better", "hope"]
+	},
+	{
+	  "title": "Unbreak My Heart",
+	  "artist": "Toni Braxton",
+	  "uri": "spotify:track:6zAiRKvAMlXHxEtyO4yxIO",
+	  "keywords": ["broken", "heart", "unbreak", "pain", "hurt", "toni braxton", "sad", "crying"]
+	},
+	{
+	  "title": "Gravity",
+	  "artist": "Sara Bareilles",
+	  "uri": "spotify:track:4NwB41BO2wh5eSNwvmH2zQ",
+	  "keywords": ["pull", "back", "cant", "let go", "toxic", "relationship", "sara bareilles", "stuck"]
+	},
+	{
+	  "title": "Breathe Me",
+	  "artist": "Sia",
+	  "uri": "spotify:track:57bgtoPSgt236HzfBOd8kj",
+	  "keywords": ["lost", "help", "alone", "sad", "sia", "lonely", "small", "breathing"]
+	},
+	{
+	  "title": "All Too Well",
+	  "artist": "Taylor Swift",
+	  "uri": "spotify:track:4rHZZAmHpZrA3iH5zx8frV",
+	  "keywords": ["remember", "memories", "past", "taylor swift", "scarf", "fall", "autumn", "miss"]
+	},
+	{
+	  "title": "Hello",
+	  "artist": "Adele",
+	  "uri": "spotify:track:4sPmO7WMQUAf45kwMOtONw",
+	  "keywords": ["hello", "call", "phone", "adele", "years", "past", "sorry", "miss", "communication"]
+	},
+	{
+	  "title": "Stay With Me",
+	  "artist": "Sam Smith",
+	  "uri": "spotify:track:5Nm9ERjJZ5oyfXZTECKmRt",
+	  "keywords": ["stay", "leave", "night", "sam smith", "lonely", "alone", "please", "need"]
+	},
+	{
+	  "title": "Skinny Love",
+	  "artist": "Bon Iver",
+	  "uri": "spotify:track:2k0lx0jzfJ2CJEfqsB7gj3",
+	  "keywords": ["fading", "love", "weak", "bon iver", "dying", "skinny", "end", "patient"]
+	},
+	{
+	  "title": "Back To Black",
+	  "artist": "Amy Winehouse",
+	  "uri": "spotify:track:3GCdLUSnKSMJhs4Tj6CV3s",
+	  "keywords": ["black", "dark", "depression", "amy winehouse", "gone", "leaving", "alcohol"]
+	},
+	{
+	  "title": "Irreplaceable",
+	  "artist": "Beyoncé",
+	  "uri": "spotify:track:6RX5GhZBrxlkUZKs60shRv",
+	  "keywords": ["left", "box", "leaving", "beyonce", "replace", "moving on", "strong", "independence"]
+	},
+	{
+	  "title": "We Are Never Ever Getting Back Together",
+	  "artist": "Taylor Swift",
+	  "uri": "spotify:track:5YqltLsjdqFtvqE7Nrysvs",
+	  "keywords": ["never", "back", "together", "taylor swift", "over", "done", "final", "breakup"]
+	},
+	{
+	  "title": "I Will Always Love You",
+	  "artist": "Whitney Houston",
+	  "uri": "spotify:track:4eHbdreAnSOrDDsFfc4Fpm",
+	  "keywords": ["always", "love", "forever", "whitney houston", "goodbye", "leaving", "bittersweet"]
+	},
+	{
+	  "title": "Nothing Compares 2 U",
+	  "artist": "Sinéad O'Connor",
+	  "uri": "spotify:track:1alQNyYZQHQScFeyJcswq4",
+	  "keywords": ["nothing", "compare", "sinead", "missing", "gone", "days", "crying", "tears"]
+	},
+	{
+	  "title": "Don't Speak",
+	  "artist": "No Doubt",
+	  "uri": "spotify:track:6urCAbunOQI9AY13Platqn",
+	  "keywords": ["silence", "speak", "words", "no doubt", "gwen stefani", "hurt", "real", "ending"]
+	},
+	{
+	  "title": "Tears Dry On Their Own",
+	  "artist": "Amy Winehouse",
+	  "uri": "spotify:track:7MDfN8XCzZJUMvJ0hA8yF9",
+	  "keywords": ["tears", "cry", "dry", "amy winehouse", "stronger", "moving on", "recovery"]
+	},
+	{
+	  "title": "Stronger",
+	  "artist": "Kelly Clarkson",
+	  "uri": "spotify:track:6v8XH9LRG6ytrMjjXmIx8M",
+	  "keywords": ["stronger", "kill", "kelly clarkson", "alone", "fighter", "better", "without"]
+	},
+	{
+	  "title": "Dancing On My Own",
+	  "artist": "Robyn",
+	  "uri": "spotify:track:0pxNyJJiL2zX3XlUQqCmAg",
+	  "keywords": ["dancing", "alone", "corner", "robyn", "watching", "moved on", "new", "see"]
+	},
+	{
+	  "title": "Praying",
+	  "artist": "Kesha",
+	  "uri": "spotify:track:0jdny0dhgjUwoIp5GkqEaA",
+	  "keywords": ["pray", "hope", "kesha", "forgiveness", "peace", "healing", "better", "abuse"]
+	},
+	{
+	  "title": "Hurt",
+	  "artist": "Christina Aguilera",
+	  "uri": "spotify:track:6CIY8DVjkUhcv4ExVVQniy",
+	  "keywords": ["hurt", "pain", "sorry", "christina aguilera", "apology", "regret", "too late"]
+	},
+	{
+	  "title": "Jar of Hearts",
+	  "artist": "Christina Perri",
+	  "uri": "spotify:track:4JehYebiI9JE8sR8MisGVb",
+	  "keywords": ["heart", "collect", "jar", "christina perri", "used", "returning", "rejection"]
+	},
+	{
+	  "title": "Cry Me a River",
+	  "artist": "Justin Timberlake",
+	  "uri": "spotify:track:1OKZiYHEZoJ6fEZrj9IlFs",
+	  "keywords": ["cry", "river", "tears", "justin timberlake", "revenge", "betrayal", "cheating"]
+	},
+	{
+	  "title": "The Scientist",
+	  "artist": "Coldplay",
+	  "uri": "spotify:track:75JFxkI2RXiU7L9VXzMkle",
+	  "keywords": ["beginning", "start", "over", "coldplay", "science", "apart", "circles", "guessing"]
+	},
+	{
+	  "title": "It's Too Late",
+	  "artist": "Carole King",
+	  "uri": "spotify:track:6FpVTvrNhJYD2hRwzrJjjb",
+	  "keywords": ["late", "too late", "carole king", "relationship", "over", "gone", "sad"]
+	},
+	{
+	  "title": "I Try",
+	  "artist": "Macy Gray",
+	  "uri": "spotify:track:3rQWKyPMHtMy4S62e8ZeFF",
+	  "keywords": ["try", "macy gray", "emotions", "feelings", "hide", "cry", "game"]
+	}
+  ]
