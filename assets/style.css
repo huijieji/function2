@@ -67,14 +67,4 @@ header {
     position: relative;
 }
 
-h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 4rem;
-    margin-bottom: 20px;
-    font-weight: 700;
-    color: #e9546b; /* 鲜红色的标题 */
-    text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.5);
-    letter-spacing: 1px;
-    position: relative;
-}
 

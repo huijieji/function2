@@ -1,0 +1,204 @@
+{
+	"quotes": [
+	  {
+		"text": "Sometimes good things fall apart so better things can fall together.",
+		"author": "Marilyn Monroe",
+		"keywords": ["fall apart", "better", "together", "breakup", "hope", "positive"]
+	  },
+	  {
+		"text": "The heart was made to be broken.",
+		"author": "Oscar Wilde",
+		"keywords": ["heart", "broken", "heartbreak", "pain", "inevitable"]
+	  },
+	  {
+		"text": "It is strange how often a heart must be broken before the years can make it wise.",
+		"author": "Sara Teasdale",
+		"keywords": ["heart", "broken", "wise", "years", "growth", "learning", "heartbreak"]
+	  },
+	  {
+		"text": "To love oneself is the beginning of a lifelong romance.",
+		"author": "Oscar Wilde",
+		"keywords": ["love", "self-love", "romance", "beginning", "yourself"]
+	  },
+	  {
+		"text": "What's broken can be mended. What hurts can be healed. And no matter how dark it gets, the sun is going to rise again.",
+		"author": "Meredith Grey (Grey's Anatomy)",
+		"keywords": ["broken", "mended", "hurts", "healed", "dark", "sun", "rise", "hope"]
+	  },
+	  {
+		"text": "You yourself, as much as anybody in the entire universe, deserve your love and affection.",
+		"author": "Buddha",
+		"keywords": ["self-love", "deserve", "affection", "yourself", "healing", "worth"]
+	  },
+	  {
+		"text": "The wound is the place where the Light enters you.",
+		"author": "Rumi",
+		"keywords": ["wound", "light", "healing", "pain", "growth", "wisdom"]
+	  },
+	  {
+		"text": "Your task is not to seek for love, but merely to seek and find all the barriers within yourself that you have built against it.",
+		"author": "Rumi",
+		"keywords": ["love", "barriers", "seek", "find", "within", "built", "against"]
+	  },
+	  {
+		"text": "Being deeply loved by someone gives you strength, while loving someone deeply gives you courage.",
+		"author": "Lao Tzu",
+		"keywords": ["love", "strength", "courage", "deeply", "relationship"]
+	  },
+	  {
+		"text": "Pain is inevitable. Suffering is optional.",
+		"author": "Buddhist Proverb",
+		"keywords": ["pain", "suffering", "inevitable", "optional", "choice"]
+	  },
+	  {
+		"text": "Healing takes courage, and we all have courage, even if we have to dig a little to find it.",
+		"author": "Tori Amos",
+		"keywords": ["healing", "courage", "strength", "find", "recovery"]
+	  },
+	  {
+		"text": "Moving on, is a simple thing, what it leaves behind is hard.",
+		"author": "Dave Mustaine",
+		"keywords": ["moving on", "leave behind", "hard", "difficult", "past"]
+	  },
+	  {
+		"text": "You never know how strong you are until being strong is your only choice.",
+		"author": "Bob Marley",
+		"keywords": ["strong", "strength", "choice", "resilience", "only"]
+	  },
+	  {
+		"text": "Turn your wounds into wisdom.",
+		"author": "Oprah Winfrey",
+		"keywords": ["wounds", "wisdom", "turn", "transform", "growth", "healing"]
+	  },
+	  {
+		"text": "The greatest step towards a life of simplicity is to learn to let go.",
+		"author": "Steve Maraboli",
+		"keywords": ["let go", "simplicity", "step", "learn", "moving on"]
+	  },
+	  {
+		"text": "Time doesn't heal emotional pain, you need to learn how to let go.",
+		"author": "Roy T. Bennett",
+		"keywords": ["time", "heal", "emotional", "pain", "let go", "learn"]
+	  },
+	  {
+		"text": "Don't cry because it's over, smile because it happened.",
+		"author": "Dr. Seuss",
+		"keywords": ["cry", "smile", "over", "happened", "moving on", "positive", "past"]
+	  },
+	  {
+		"text": "You can't stay in your corner of the Forest waiting for others to come to you. You have to go to them sometimes.",
+		"author": "A.A. Milne (Winnie-the-Pooh)",
+		"keywords": ["wait", "forest", "corner", "others", "initiative", "action"]
+	  },
+	  {
+		"text": "We must be willing to let go of the life we've planned, so as to have the life that is waiting for us.",
+		"author": "Joseph Campbell",
+		"keywords": ["let go", "life", "planned", "waiting", "change", "acceptance"]
+	  },
+	  {
+		"text": "The word 'happy' would lose its meaning if it were not balanced by sadness.",
+		"author": "Carl Jung",
+		"keywords": ["happy", "sad", "balance", "meaning", "emotion"]
+	  },
+	  {
+		"text": "When one door of happiness closes, another opens; but often we look so long at the closed door that we do not see the one which has been opened for us.",
+		"author": "Helen Keller",
+		"keywords": ["door", "happiness", "closes", "opens", "opportunity", "focus"]
+	  },
+	  {
+		"text": "Letting go doesn't mean that you don't care about someone anymore. It's just realizing that the only person you really have control over is yourself.",
+		"author": "Deborah Reber",
+		"keywords": ["letting go", "care", "control", "yourself", "person", "realize"]
+	  },
+	  {
+		"text": "Grief is the price we pay for love.",
+		"author": "Queen Elizabeth II",
+		"keywords": ["grief", "price", "pay", "love", "loss", "emotion"]
+	  },
+	  {
+		"text": "Tears come from the heart and not from the brain.",
+		"author": "Leonardo da Vinci",
+		"keywords": ["tears", "heart", "brain", "cry", "emotion", "sad"]
+	  },
+	  {
+		"text": "If you've been burnt, pour your heart out. If you've been hurt, find the courage to love again.",
+		"author": "Paulo Coelho",
+		"keywords": ["burnt", "heart", "hurt", "courage", "love", "again", "try"]
+	  },
+	  {
+		"text": "Hearts will never be practical until they are made unbreakable.",
+		"author": "The Wizard of Oz",
+		"keywords": ["hearts", "practical", "unbreakable", "love", "fragile"]
+	  },
+	  {
+		"text": "Love yourself first and everything else falls into line.",
+		"author": "Lucille Ball",
+		"keywords": ["love", "yourself", "first", "self-love", "priority"]
+	  },
+	  {
+		"text": "Sometimes, you need to be alone. Not to be lonely, but to enjoy your free time being yourself.",
+		"author": "Anonymous",
+		"keywords": ["alone", "lonely", "yourself", "free time", "enjoy", "self"]
+	  },
+	  {
+		"text": "The emotion that can break your heart is sometimes the very one that heals it.",
+		"author": "Nicholas Sparks",
+		"keywords": ["emotion", "break", "heart", "heals", "paradox", "healing"]
+	  },
+	  {
+		"text": "Every time your heart is broken, a doorway cracks open to a world full of new beginnings, new opportunities.",
+		"author": "Patti Roberts",
+		"keywords": ["heart", "broken", "doorway", "new", "beginnings", "opportunities"]
+	  },
+	  {
+		"text": "Sometimes it takes a heartbreak to shake us awake and help us see we are worth so much more than we're settling for.",
+		"author": "Mandy Hale",
+		"keywords": ["heartbreak", "awake", "worth", "more", "settling", "value"]
+	  },
+	  {
+		"text": "Hope is being able to see that there is light despite all of the darkness.",
+		"author": "Desmond Tutu",
+		"keywords": ["hope", "light", "darkness", "see", "future", "positive"]
+	  },
+	  {
+		"text": "Rock bottom became the solid foundation on which I rebuilt my life.",
+		"author": "J.K. Rowling",
+		"keywords": ["rock bottom", "foundation", "rebuild", "life", "solid", "new start"]
+	  },
+	  {
+		"text": "The pain you feel today is the strength you feel tomorrow.",
+		"author": "Anonymous",
+		"keywords": ["pain", "today", "strength", "tomorrow", "growth", "suffering"]
+	  },
+	  {
+		"text": "When you come out of the storm, you won't be the same person who walked in. That's what this storm's all about.",
+		"author": "Haruki Murakami",
+		"keywords": ["storm", "person", "change", "transformation", "difficulties", "growth"]
+	  },
+	  {
+		"text": "What we once enjoyed and deeply loved we can never lose, for all that we love deeply becomes part of us.",
+		"author": "Helen Keller",
+		"keywords": ["enjoyed", "loved", "lose", "becomes", "part", "memory"]
+	  },
+	  {
+		"text": "Sometimes good things fall apart so better things can come together.",
+		"author": "Marilyn Monroe",
+		"keywords": ["fall apart", "better", "come together", "change", "improvement"]
+	  },
+	  {
+		"text": "The most beautiful people we have known are those who have known defeat, known suffering, known struggle, known loss, and have found their way out of the depths.",
+		"author": "Elisabeth Kübler-Ross",
+		"keywords": ["beautiful", "defeat", "suffering", "struggle", "loss", "way out", "depths"]
+	  },
+	  {
+		"text": "I think it's important to realize you can miss something, but not want it back.",
+		"author": "Paulo Coelho",
+		"keywords": ["miss", "not want back", "realization", "moving on", "acceptance"]
+	  },
+	  {
+		"text": "You don't have to have it all figured out to move forward.",
+		"author": "Anonymous",
+		"keywords": ["figured out", "move forward", "progress", "uncertainty", "action"]
+	  }
+	]
+  }
