@@ -1,14 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Quicksand:wght@300;400;500&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-@font-face {
-    font-family: 'Canela';
-    src: url('https://fonts.cdnfonts.com/css/canela') format('woff2');
-    font-weight: normal;
-    font-style: normal;
 }
 
 body {
@@ -17,31 +12,16 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     color: #ffffff;
-    font-family: 'Canela', 'Times New Roman', serif;
+    font-family: 'Quicksand', sans-serif;
     min-height: 100vh;
     padding: 0;
-    line-height: 1.2;
+    line-height: 1.5;
     position: relative;
     overflow-x: hidden;
-    letter-spacing: -0.02em;
+    font-size: 18px;
+    font-weight: 400;
 }
 
-/* background image style */
-.background-image {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100vw;
-	height: 100vh;
-	z-index: -1;
-	overflow: hidden;
-}
-
-.background-image img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-}
 
 body::before {
     content: "";
@@ -52,6 +32,23 @@ body::before {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 0;
+}
+
+/* background image style */
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.background-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .container {
@@ -73,48 +70,41 @@ body::before {
     padding: 20px 0;
 }
 
-.logo {
-    font-size: 1rem;
-    font-weight: normal;
-    color: #ffffff;
-    font-family: 'Helvetica', sans-serif;
-    letter-spacing: 0;
-}
 
-.brand-name {
-    font-size: 1rem;
-    font-weight: normal;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    font-family: 'Helvetica', sans-serif;
+.logo, .brand-name {
+    font-size: 4.2rem;
+    font-weight: 600;
     color: #ffffff;
+    font-family: 'Dancing Script', cursive;
+    letter-spacing: 0.01em;
 }
 
 .main-content {
     width: 60%;
-    padding: 30px;
+    padding: 35px;
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(5px);
     border-radius: 10px;
     margin-right: 5%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+/* main title */
 .site-title {
-    font-size: 2.2rem;
+    font-size: 3.2rem;
     line-height: 1.2;
-    margin-bottom: 20px;
-    font-family: 'Canela', 'Times New Roman', serif;
-    font-weight: normal;
-    letter-spacing: -0.02em;
+    margin-bottom: 30px;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    letter-spacing: 0.01em;
 }
 
 .message-text {
-    font-size: 1.1rem;
-    line-height: 1.5;
-    margin-bottom: 30px;
-    font-family: 'Canela', 'Times New Roman', serif;
-    font-weight: normal;
-    letter-spacing: -0.02em;
+    font-size: 1.3rem;
+    line-height: 1.6;
+    margin-bottom: 35px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
 }
 
 .message-box {
@@ -124,32 +114,35 @@ body::before {
     position: relative;
 }
 
+/* message title */
 .message-title {
-    font-size: 1.3rem;
-    margin-bottom: 15px;
-    font-weight: normal;
-    letter-spacing: -0.02em;
-    font-family: 'Canela', 'Times New Roman', serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-family: 'Dancing Script', cursive;
 }
 
 textarea {
     width: 100%;
-    min-height: 180px;
+    min-height: 200px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     outline: none;
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #fff;
     resize: none;
     background: rgba(0, 0, 0, 0.3);
     line-height: 1.8;
-    padding: 15px;
-    font-family: 'Canela', 'Times New Roman', serif;
-    border-radius: 5px;
-    margin-bottom: 20px;
+    padding: 20px;
+    font-family: 'Quicksand', sans-serif;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    font-weight: 400;
 }
 
 textarea::placeholder {
     color: rgba(255, 255, 255, 0.5);
+    font-style: italic;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .button-group {
@@ -158,29 +151,42 @@ textarea::placeholder {
     flex-wrap: wrap;
 }
 
+
 .btn {
-    padding: 12px 15px;
-    font-size: 0.9rem;
+    padding: 14px 20px;
+    font-size: 0.95rem;
     cursor: pointer;
-    transition: all 0.2s ease;
-    font-weight: normal;
-    font-family: 'Helvetica', sans-serif;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
     background: transparent;
     border: 1px solid #fff;
     color: #fff;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.12em;
     text-align: center;
     flex: 1;
-    min-width: 120px;
+    min-width: 140px;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
 }
+
 
 .btn:hover {
-    background-color: #fff;
-    color: #000;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
 }
 
-/* notes */
+.btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Right side journal panel */
 .saved-entries-panel {
     width: 35%;
     display: flex;
@@ -190,87 +196,88 @@ textarea::placeholder {
 .saved-entries {
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
-    padding: 30px;
+    padding: 35px;
     backdrop-filter: blur(5px);
     margin-bottom: 40px;
     flex-grow: 1;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+/*Saved entries title */
 .saved-entries-title {
-    font-family: 'Helvetica', sans-serif;
-    font-size: 1rem;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    font-weight: normal;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+    font-weight: 600;
+    letter-spacing: 0.01em;
 }
 
 .entry-list {
-    max-height: 350px;
+    max-height: 400px;
     overflow-y: auto;
 }
 
 .entry-item {
-    margin-bottom: 15px;
-    padding: 15px;
-    font-size: 0.95rem;
+    margin-bottom: 18px;
+    padding: 20px;
+    font-size: 1.1rem;
     transition: all 0.3s ease;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .entry-date {
-    font-size: 0.8rem;
-    margin-bottom: 5px;
-    font-weight: normal;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    font-weight: 300;
     font-style: italic;
     color: rgba(255, 255, 255, 0.7);
+    font-family: 'Quicksand', sans-serif;
 }
 
 .entry-text {
-    line-height: 1.4;
-    font-family: 'Canela', 'Times New Roman', serif;
-    letter-spacing: -0.02em;
+    line-height: 1.6;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .no-entries {
     text-align: center;
-    padding: 20px;
+    padding: 25px;
     font-style: italic;
-    font-size: 0.9rem;
-    font-family: 'Canela', 'Times New Roman', serif;
+    font-size: 1.1rem;
+    font-family: 'Quicksand', sans-serif;
     color: rgba(255, 255, 255, 0.6);
 }
 
-/* music-section */
+/* Music section */
 .music-section {
     display: none;
-    margin-top: 20px;
+    margin-top: 25px;
     margin-bottom: 40px;
     width: 100%;
 }
 
 .spotify-embed {
     width: 100%;
-    height: 80px;
+    height: 90px;
     border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
+/* quotes */
 .main-quote {
-    font-family: 'Canela', 'Times New Roman', serif;
-    font-style: italic;
-    font-size: 1.15rem;
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.2rem;
     text-align: center;
     line-height: 1.4;
-    letter-spacing: -0.02em;
     background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
+    padding: 30px;
     border-radius: 10px;
     backdrop-filter: blur(5px);
+    font-weight: 600;
 }
 
 /* Modal styles */
@@ -290,86 +297,95 @@ textarea::placeholder {
     background-color: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(10px);
     margin: 10% auto;
-    padding: 40px;
+    padding: 45px;
     width: 90%;
-    max-width: 500px;
+    max-width: 550px;
     position: relative;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     color: #fff;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
 .close {
     position: absolute;
-    right: 20px;
-    top: 15px;
+    right: 25px;
+    top: 20px;
     color: #fff;
-    font-size: 28px;
+    font-size: 32px;
     font-weight: bold;
     cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s;
 }
 
 .close:hover {
-    color: #ccc;
+    opacity: 1;
 }
 
+/* Dancing Script font for modal title */
 .modal-title {
-    font-family: 'Canela', 'Times New Roman', serif;
-    margin-bottom: 20px;
-    font-size: 1.8rem;
+    font-family: 'Dancing Script', cursive;
+    margin-bottom: 25px;
+    font-size: 3rem;
     text-align: center;
-    font-weight: normal;
-    letter-spacing: -0.02em;
+    font-weight: 700;
 }
 
-/* Quote Modal */
+/* Regular font for quote text */
 .modal-quote {
-    font-family: 'Canela', 'Times New Roman', serif;
+    font-family: 'Quicksand', sans-serif;
     font-size: 1.5rem;
-    margin: 30px 0;
+    margin: 35px 0;
     text-align: center;
-    line-height: 1.2;
+    line-height: 1.5;
     position: relative;
-    letter-spacing: -0.02em;
+    font-style: italic;
+    font-weight: 400;
 }
 
+/* Dancing Script font for quote author */
 .quote-author {
-    font-size: 1rem;
+    font-size: 1.8rem;
     color: rgba(255, 255, 255, 0.8);
     text-align: center;
-    margin-bottom: 30px;
-    font-family: 'Canela', 'Times New Roman', serif;
-    font-style: italic;
+    margin-bottom: 35px;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 600;
 }
 
-/* Button in modal */
+
 .modal-btn {
     display: block;
     margin: 0 auto;
-    padding: 12px 30px;
+    padding: 14px 32px;
     background: transparent;
     color: #fff;
     border: 1px solid rgba(255, 255, 255, 0.5);
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     cursor: pointer;
-    transition: all 0.2s ease;
-    font-family: 'Helvetica', sans-serif;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat', sans-serif; 
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.12em;
+    font-weight: 500;
+    border-radius: 8px;
 }
 
 .modal-btn:hover {
-    background-color: #fff;
-    color: #000;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.8);
 }
 
 /* Loading spinner for quotes */
 .loading-spinner {
     display: inline-block;
-    width: 40px;
-    height: 40px;
-    margin: 20px auto;
-    border: 2px solid rgba(255, 255, 255, 0.1);
+    width: 50px;
+    height: 50px;
+    margin: 25px auto;
+    border: 3px solid rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     border-top-color: #fff;
     animation: spin 1s ease-in-out infinite;
@@ -388,7 +404,7 @@ textarea::placeholder {
     }
     
     .main-content {
-        margin-bottom:, 30px;
+        margin-bottom: 30px;
     }
     
     .button-group {
@@ -396,10 +412,48 @@ textarea::placeholder {
     }
     
     .btn {
-        min-width: 120px;
+        min-width: 130px;
     }
     
     .site-title {
+        font-size: 3rem;
+    }
+    
+    .message-title, 
+    .saved-entries-title {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 16px;
+    }
+    
+    .site-title {
+        font-size: 2.5rem;
+    }
+    
+    .message-title, 
+    .saved-entries-title {
+        font-size: 2rem;
+    }
+    
+    .message-text {
+        font-size: 1.1rem;
+    }
+    
+    .btn {
+        padding: 12px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .logo, 
+    .brand-name {
+        font-size: 1.8rem;
+    }
+    
+    .main-quote {
         font-size: 1.8rem;
     }
 }
