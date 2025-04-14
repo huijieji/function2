@@ -101,17 +101,19 @@ html {
 /* Main site title */
 .brand-name {
     position: relative;
-    font-size: 4.5rem;
+    font-size: 5.5rem;
     font-weight: 600;
     color: #ffffff;
     font-family: 'Dancing Script', cursive;
     letter-spacing: 0.01em;
     text-align: center;
-    padding: 0 50px;
+    padding: 0 200px;
     transition: all 0.5s ease;
     white-space: normal;
     width: 100%;
     max-width: 100%;
+	line-height: 7rem;
+	
 }
 
 /* Left heart decoration on title */
@@ -182,7 +184,7 @@ html {
 
 /* Secondary title */
 .site-title {
-    font-size: 3.2rem;
+    font-size: 3.5rem;
     line-height: 1.2;
     margin-bottom: 30px;
     font-family: 'Dancing Script', cursive;
@@ -209,7 +211,7 @@ html {
 
 /* Message input title */
 .message-title {
-    font-size: 2.5rem;
+    font-size: 3.0rem;
     margin-bottom: 20px;
     font-weight: 600;
     font-family: 'Dancing Script', cursive;
@@ -588,8 +590,8 @@ textarea:focus {
     }
     
     .brand-name {
-        font-size: 2.5rem;
-        padding: 0 25px;
+        font-size: 3.0rem;
+        padding: 0 20px;
         line-height: 1.2;
     }
     
@@ -629,8 +631,8 @@ textarea:focus {
 /* Extra small screen adjustments */
 @media (max-width: 400px) {
     .brand-name {
-        font-size: 2.2rem;
-        padding: 0 20px;
+        font-size: 2.9rem;
+        padding: 0 10px;
     }
     
     .brand-name::before,
