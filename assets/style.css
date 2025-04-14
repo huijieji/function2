@@ -534,3 +534,107 @@ textarea:focus {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     border-color: rgba(255, 255, 255, 0.8);
 }
+
+/* Tablet responsive styles */
+@media (max-width: 900px) {
+    .main-content,
+    .saved-entries-panel {
+        width: 100%;
+        margin-right: 0;
+    }
+    
+    .main-content {
+        margin-bottom: 30px;
+    }
+    
+    .button-group {
+        justify-content: center;
+    }
+    
+    .btn {
+        min-width: 130px;
+    }
+    
+    .brand-name {
+        font-size: 3.5rem;
+        padding: 0 40px;
+        /* Ensure text doesn't get covered by hearts */
+        margin: 0 30px;
+    }
+    
+    .brand-name::before,
+    .brand-name::after {
+        font-size: 2.8rem;
+    }
+    
+    .site-title {
+        font-size: 3rem;
+    }
+    
+    .message-title, 
+    .saved-entries-title {
+        font-size: 2.2rem;
+    }
+}
+
+/* Mobile responsive styles */
+@media (max-width: 600px) {
+    body {
+        font-size: 16px;
+    }
+    
+    .header {
+        padding: 15px 0;
+    }
+    
+    .brand-name {
+        font-size: 2.5rem;
+        padding: 0 25px;
+        line-height: 1.2;
+    }
+    
+    .brand-name::before {
+        left: -10px;
+        font-size: 2rem;
+    }
+    
+    .brand-name::after {
+        right: -10px;
+        font-size: 2rem;
+    }
+    
+    .site-title {
+        font-size: 2.5rem;
+    }
+    
+    .message-title, 
+    .saved-entries-title {
+        font-size: 2rem;
+    }
+    
+    .message-text {
+        font-size: 1.1rem;
+    }
+    
+    .btn {
+        padding: 12px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .main-quote {
+        font-size: 1.8rem;
+    }
+}
+
+/* Extra small screen adjustments */
+@media (max-width: 400px) {
+    .brand-name {
+        font-size: 2.2rem;
+        padding: 0 20px;
+    }
+    
+    .brand-name::before,
+    .brand-name::after {
+        font-size: 1.8rem;
+    }
+}
