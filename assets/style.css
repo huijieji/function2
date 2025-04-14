@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Quicksand:wght@300;400;500&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Quicksand:wght@300;400;500&display=swap');
-
 /* Reset styles */
 * {
     margin: 0;
@@ -9,12 +7,7 @@
     box-sizing: border-box;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Body styles */
 body {
     background-size: cover;
     background-position: center center;
@@ -31,7 +24,6 @@ body {
     font-weight: 400;
 }
 
-
 body::before {
     content: "";
     position: absolute;
@@ -43,7 +35,12 @@ body::before {
     z-index: 0;
 }
 
-/* background image style */
+/* Cursor */
+html {
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z' fill='%238ab4ff'/></svg>") 12 12, auto;
+}
+
+/* Background Image */
 .background-image {
     position: fixed;
     top: 0;
@@ -54,12 +51,14 @@ body::before {
     overflow: hidden;
 }
 
+/* Background image styling */
 .background-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
+/* Main container */
 .container {
     position: relative;
     z-index: 1;
@@ -70,24 +69,107 @@ body::before {
     flex-wrap: wrap;
 }
 
+/* Header section */
 .header {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin-bottom: 30px;
     padding: 20px 0;
+    position: relative;
+    overflow: visible;
 }
 
+/* Header gradient bottom border */
+.header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, 
+        transparent 0%, 
+        #8ab4ff 25%, 
+        #ff8a8a 50%, 
+        #8ab4ff 75%, 
+        transparent 100%);
+    opacity: 0.7;
+}
 
-.logo, .brand-name {
-    font-size: .2rem;
+/* Main site title */
+.brand-name {
+    position: relative;
+    font-size: 4.5rem;
     font-weight: 600;
     color: #ffffff;
     font-family: 'Dancing Script', cursive;
     letter-spacing: 0.01em;
+    text-align: center;
+    padding: 0 50px;
+    transition: all 0.5s ease;
+    white-space: normal;
+    width: 100%;
+    max-width: 100%;
 }
 
+/* Left heart decoration on title */
+.brand-name::before {
+    content: "❤";
+    position: absolute;
+    font-size: 3.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    filter: drop-shadow(0 0 8px rgba(138, 180, 255, 0.8));
+    transition: all 0.5s ease;
+    left: 5px;
+    color: #8ab4ff;
+    animation: pulse-blue 2s infinite;
+}
+
+/* Right heart decoration on title */
+.brand-name::after {
+    content: "❤";
+    position: absolute;
+    font-size: 3.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    filter: drop-shadow(0 0 8px rgba(138, 180, 255, 0.8));
+    transition: all 0.5s ease;
+    right: 5px;
+    color: #ff8a8a;
+    animation: pulse-red 2s infinite 1s; 
+}
+
+
+/* Title effect */
+.brand-name:hover {
+    text-shadow: 0 0 20px rgba(138, 180, 255, 0.5);
+    background: linear-gradient(45deg, #c1d6ff, #ffffff, #ffc1c1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 0.03em;
+}
+
+/* Left heart effect */
+.brand-name:hover::before {
+    left: 0;
+    transform: translateY(-50%) scale(1.2) rotate(-10deg);
+    filter: drop-shadow(0 0 15px rgba(138, 180, 255, 1));
+}
+
+/* Right heart effect */
+.brand-name:hover::after {
+    right: 0;
+    transform: translateY(-50%) scale(1.2) rotate(10deg);
+    filter: drop-shadow(0 0 15px rgba(255, 138, 138, 1));
+}
+
+/* Main content section */
 .main-content {
     width: 60%;
     padding: 35px;
@@ -98,7 +180,7 @@ body::before {
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* main title */
+/* Secondary title */
 .site-title {
     font-size: 3.2rem;
     line-height: 1.2;
@@ -108,6 +190,7 @@ body::before {
     letter-spacing: 0.01em;
 }
 
+/* Intro message text */
 .message-text {
     font-size: 1.3rem;
     line-height: 1.6;
@@ -116,6 +199,7 @@ body::before {
     font-weight: 400;
 }
 
+/* Message input container */
 .message-box {
     width: 100%;
     background-color: transparent;
@@ -123,7 +207,7 @@ body::before {
     position: relative;
 }
 
-/* message title */
+/* Message input title */
 .message-title {
     font-size: 2.5rem;
     margin-bottom: 20px;
@@ -131,6 +215,7 @@ body::before {
     font-family: 'Dancing Script', cursive;
 }
 
+/* Textarea styling */
 textarea {
     width: 100%;
     min-height: 200px;
@@ -148,24 +233,32 @@ textarea {
     font-weight: 400;
 }
 
+/* Textarea placeholder styling */
 textarea::placeholder {
     color: rgba(255, 255, 255, 0.5);
     font-style: italic;
     font-family: 'Quicksand', sans-serif;
 }
 
+/* Textarea focus effect */
+textarea:focus {
+    border-color: #8ab4ff;
+    box-shadow: 0 0 15px rgba(138, 180, 255, 0.3);
+}
+
+/* Button group container */
 .button-group {
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
 }
 
-
+/* Button styling with heart animation */
 .btn {
     padding: 14px 20px;
     font-size: 0.95rem;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
     font-weight: 500;
     font-family: 'Montserrat', sans-serif;
     background: transparent;
@@ -181,15 +274,36 @@ textarea::placeholder {
     overflow: hidden;
 }
 
+/* Heart icon for button hover effect */
+.btn::before {
+    content: "❤";
+    position: absolute;
+    opacity: 0;
+    top: 50%;
+    left: -20px;
+    transform: translateY(-50%);
+    font-size: 0;
+    color: #8ab4ff;
+    transition: all 0.3s ease;
+}
 
+/* Button hover state */
 .btn:hover {
-    background-color: rgba(255, 255, 255, 0.15);
-    color: #fff;
-    border-color: rgba(255, 255, 255, 0.8);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    background-color: rgba(138, 180, 255, 0.15);
+    border-color: #8ab4ff;
+    padding-left: 35px;
+    box-shadow: 0 0 15px rgba(138, 180, 255, 0.3);
     transform: translateY(-2px);
 }
 
+/* Button hover heart animation */
+.btn:hover::before {
+    opacity: 1;
+    left: 15px;
+    font-size: 14px;
+}
+
+/* Button active state */
 .btn:active {
     transform: translateY(0);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -202,6 +316,7 @@ textarea::placeholder {
     flex-direction: column;
 }
 
+/* Saved entries container */
 .saved-entries {
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
@@ -212,7 +327,7 @@ textarea::placeholder {
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/*Saved entries title */
+/* Saved entries title */
 .saved-entries-title {
     font-family: 'Dancing Script', cursive;
     font-size: 2.5rem;
@@ -223,11 +338,13 @@ textarea::placeholder {
     letter-spacing: 0.01em;
 }
 
+/* Entry list scrollable container */
 .entry-list {
     max-height: 400px;
     overflow-y: auto;
 }
 
+/* Journal entry item with blue-red gradient border effect */
 .entry-item {
     margin-bottom: 18px;
     padding: 20px;
@@ -236,8 +353,34 @@ textarea::placeholder {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 10px;
+    position: relative;
+    overflow: hidden;
 }
 
+/* Left gradient border for entry items */
+.entry-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 0;
+    background: linear-gradient(to bottom, #8ab4ff, #ff8a8a);
+    transition: height 0.4s ease;
+}
+
+/* Entry item hover state */
+.entry-item:hover {
+    transform: translateX(5px);
+    background-color: rgba(138, 180, 255, 0.1);
+}
+
+/* Entry item hover gradient animation */
+.entry-item:hover::before {
+    height: 100%;
+}
+
+/* Entry date styling */
 .entry-date {
     font-size: 1rem;
     margin-bottom: 10px;
@@ -247,11 +390,13 @@ textarea::placeholder {
     font-family: 'Quicksand', sans-serif;
 }
 
+/* Entry text styling */
 .entry-text {
     line-height: 1.6;
     font-family: 'Quicksand', sans-serif;
 }
 
+/* Empty entries message */
 .no-entries {
     text-align: center;
     padding: 25px;
@@ -261,7 +406,7 @@ textarea::placeholder {
     color: rgba(255, 255, 255, 0.6);
 }
 
-/* Music section */
+/* Music player section */
 .music-section {
     display: none;
     margin-top: 25px;
@@ -269,6 +414,7 @@ textarea::placeholder {
     width: 100%;
 }
 
+/* Spotify player embed */
 .spotify-embed {
     width: 100%;
     height: 90px;
@@ -276,7 +422,7 @@ textarea::placeholder {
     border-radius: 10px;
 }
 
-/* quotes */
+/* Main quote styling */
 .main-quote {
     font-family: 'Dancing Script', cursive;
     font-size: 2.2rem;
@@ -288,6 +434,7 @@ textarea::placeholder {
     backdrop-filter: blur(5px);
     font-weight: 600;
 }
+
 
 /* Modal styles */
 .modal {
@@ -386,83 +533,4 @@ textarea::placeholder {
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     border-color: rgba(255, 255, 255, 0.8);
-}
-
-/* Loading spinner for quotes */
-.loading-spinner {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    margin: 25px auto;
-    border: 3px solid rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    border-top-color: #fff;
-    animation: spin 1s ease-in-out infinite;
-}
-
-@keyframes spin {
-    to { transform: rotate(360deg); }
-}
-
-/* Responsive Design */
-@media (max-width: 900px) {
-    .main-content,
-    .saved-entries-panel {
-        width: 100%;
-        margin-right: 0;
-    }
-    
-    .main-content {
-        margin-bottom: 30px;
-    }
-    
-    .button-group {
-        justify-content: center;
-    }
-    
-    .btn {
-        min-width: 130px;
-    }
-    
-    .site-title {
-        font-size: 3rem;
-    }
-    
-    .message-title, 
-    .saved-entries-title {
-        font-size: 2.2rem;
-    }
-}
-
-@media (max-width: 600px) {
-    body {
-        font-size: 16px;
-    }
-    
-    .site-title {
-        font-size: 2.5rem;
-    }
-    
-    .message-title, 
-    .saved-entries-title {
-        font-size: 2rem;
-    }
-    
-    .message-text {
-        font-size: 1.1rem;
-    }
-    
-    .btn {
-        padding: 12px 15px;
-        font-size: 0.9rem;
-    }
-    
-    .logo, 
-    .brand-name {
-        font-size: 1.8rem;
-    }
-    
-    .main-quote {
-        font-size: 1.8rem;
-    }
 }
