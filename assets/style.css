@@ -24,6 +24,7 @@ body {
     font-weight: 400;
 }
 
+/* Body before styles */
 body::before {
     content: "";
     position: absolute;
@@ -451,6 +452,7 @@ textarea:focus {
     overflow: auto;
 }
 
+/* Modal- content styles */
 .modal-content {
     background-color: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(10px);
@@ -463,7 +465,7 @@ textarea:focus {
     color: #fff;
     border-radius: 15px;
 }
-
+/* Close styles */
 .close {
     position: absolute;
     right: 25px;
@@ -476,6 +478,7 @@ textarea:focus {
     transition: opacity 0.2s;
 }
 
+/* Close hoverstyles */
 .close:hover {
     opacity: 1;
 }
@@ -511,7 +514,7 @@ textarea:focus {
     font-weight: 600;
 }
 
-
+/* modal-btn style */
 .modal-btn {
     display: block;
     margin: 0 auto;
@@ -528,7 +531,7 @@ textarea:focus {
     font-weight: 500;
     border-radius: 8px;
 }
-
+/* modal-btn hover style */
 .modal-btn:hover {
     background-color: rgba(255, 255, 255, 0.15);
     color: #fff;
