@@ -21,8 +21,8 @@
 // I added comments throughout the code to explain what I was doing and why I chose certain methods. 
 // This helps me learn more deeply and also makes it easier to code a website from a beignnier.
 
-//(Learn it from 6:50/39:00  https://www.youtube.com/watch?v=0ik6X4DJKCc)
 
+//(Learn it from 6:50/39:00  https://www.youtube.com/watch?v=0ik6X4DJKCc)
 document.addEventListener('DOMContentLoaded', function() {
     console.log('DOM loaded, initializing application...');
 
