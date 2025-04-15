@@ -1,4 +1,4 @@
-// This is a heartbreak healing app I built to help people cope with breakups
+// This is a heartbreak healing website I built to help people cope with breakups
 // Core features: mood journaling, therapeutic music, and inspirational quotes
 // This project is part of my ongoing exploration of JavaScript and emotional web design. 
 // The idea is to help people going through breakups express their feelings and find comfort in quotes and get music suggestions that match their mood. 
@@ -21,12 +21,6 @@
 // I added comments throughout the code to explain what I was doing and why I chose certain methods. 
 // This helps me learn more deeply and also makes it easier to code a website from a beignnier.
 
-
-// Console.founction 
-// Using DOMContentLoaded instead of window.onload because we do not need to wait
-// for all images/resources - makes the app feel faster to users
-// DOM element references - using getElementById for better performance
-// These are core UI elements that must be available
 //(Learn it from 6:50/39:00  https://www.youtube.com/watch?v=0ik6X4DJKCc)
 
 document.addEventListener('DOMContentLoaded', function() {
