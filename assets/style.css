@@ -94,7 +94,7 @@ html {
     background: linear-gradient(to right, 
         transparent 0%, 
         #8ab4ff 25%, 
-        #ff8a8a 50%, 
+        #88e0f8 50%, 
         #8ab4ff 75%, 
         transparent 100%);
     opacity: 0.7;
@@ -144,7 +144,7 @@ html {
     filter: drop-shadow(0 0 8px rgba(138, 180, 255, 0.8));
     transition: all 0.5s ease;
     right: 5px;
-    color: #ff8a8a;
+    color: #88e0f8;
     animation: pulse-red 2s infinite 1s; 
 }
 
@@ -152,7 +152,7 @@ html {
 /* Title effect */
 .brand-name:hover {
     text-shadow: 0 0 20px rgba(138, 180, 255, 0.5);
-    background: linear-gradient(45deg, #c1d6ff, #ffffff, #ffc1c1);
+    background: linear-gradient(45deg, #c1d6ff, #ffffff,#88e0f8);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -170,7 +170,7 @@ html {
 .brand-name:hover::after {
     right: 0;
     transform: translateY(-50%) scale(1.2) rotate(10deg);
-    filter: drop-shadow(0 0 15px rgba(255, 138, 138, 1));
+    filter: drop-shadow(0 0 15px #88e0f8);
 }
 
 /* Main content section */
@@ -388,7 +388,7 @@ textarea:focus {
     left: 0;
     width: 3px;
     height: 0;
-    background: linear-gradient(to bottom, #8ab4ff, #ff8a8a);
+    background: linear-gradient(to bottom, #8ab4ff, #88e0f8;);
     transition: height 0.4s ease;
 }
 
@@ -617,7 +617,7 @@ textarea:focus {
         }
         25% {
             transform: translateY(-50%) scale(1.2) rotate(5deg);
-            filter: drop-shadow(0 0 12px rgba(255, 138, 138, 0.8));
+            filter: drop-shadow(0 0 12px #88e0f8);
         }
         50% {
             transform: translateY(-50%) scale(1);
@@ -676,7 +676,7 @@ textarea:focus {
         left: 15px;
         transform: translateY(-50%);
         font-size: 16px;
-        color: #ff8a8a;
+        color:#88e0f8;;
         animation: modal-btn-pulse 2s infinite;
     }
     
@@ -686,7 +686,7 @@ textarea:focus {
         }
         50% {
             transform: translateY(-50%) scale(1.2);
-            filter: drop-shadow(0 0 8px rgba(255, 138, 138, 0.8));
+            filter: drop-shadow(0 0 8px#88e0f8);
         }
         100% {
             transform: translateY(-50%) scale(1);
@@ -721,15 +721,15 @@ textarea:focus {
 @keyframes pulse-red {
     0% {
         transform: translateY(-50%) scale(1);
-        filter: drop-shadow(0 0 5px rgba(255, 138, 138, 0.5));
+        filter: drop-shadow(0 0 5px #88e0f8);
     }
     50% {
         transform: translateY(-50%) scale(1.1);
-        filter: drop-shadow(0 0 10px rgba(255, 138, 138, 0.8));
+        filter: drop-shadow(0 0 10px #88e0f8);
     }
     100% {
         transform: translateY(-50%) scale(1);
-        filter: drop-shadow(0 0 5px rgba(255, 138, 138, 0.5));
+        filter: drop-shadow(0 0 5px #88e0f8);
     }
 }
 
