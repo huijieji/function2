@@ -679,7 +679,7 @@ textarea:focus {
     .modal-btn {
         position: relative;
         overflow: hidden;
-        padding-left: 44px;
+        padding-left: 40px;
     }
     
     .modal-btn::before {
@@ -719,7 +719,7 @@ textarea:focus {
 .btn {
     position: relative;
     overflow: hidden;
-    padding-left: 30px;
+    padding-left: 35px;
 }
 
 .btn::before {
