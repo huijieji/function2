@@ -114,8 +114,7 @@ html {
     white-space: normal;
     width: 100%;
     max-width: 100%;
-	line-height: 7rem;
-	
+    line-height: 7rem;
 }
 
 /* Left heart decoration on title */
@@ -147,7 +146,6 @@ html {
     color: #ff8a8a;
     animation: pulse-red 2s infinite 1s; 
 }
-
 
 /* Title effect */
 .brand-name:hover {
@@ -458,7 +456,6 @@ textarea:focus {
     font-weight: 600;
 }
 
-
 /* Modal styles */
 .modal {
     display: none;
@@ -472,7 +469,7 @@ textarea:focus {
     overflow: auto;
 }
 
-/* Modal- content styles */
+/* Modal content styles */
 .modal-content {
     background-color: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(10px);
@@ -485,6 +482,7 @@ textarea:focus {
     color: #fff;
     border-radius: 15px;
 }
+
 /* Close styles */
 .close {
     position: absolute;
@@ -498,12 +496,12 @@ textarea:focus {
     transition: opacity 0.2s;
 }
 
-/* Close hoverstyles */
+/* Close hover styles */
 .close:hover {
     opacity: 1;
 }
 
-/* Dispay font for modal title */
+/* Display font for modal title */
 .modal-title {
     font-family: 'Dancing Script', cursive;
     margin-bottom: 25px;
@@ -561,146 +559,57 @@ textarea:focus {
     border-color: rgba(255, 255, 255, 0.8);
 }
 
-/* For mobile devices - try to make different than web verison*/
-@media (hover: none) and (pointer: coarse) {
-    /* Brand name effect for mobile */
-    .brand-name {
-        background: linear-gradient(45deg, #c1d6ff, #ffffff, #ffc1c1);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        animation: brand-pulse 3s infinite;
-    }
+/* Mobile Navigation Styles */
+.mobile-nav {
+    display: none; /* Hidden by default, shown only on mobile */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
 
-    
-    @keyframes brand-pulse {
-        0% {
-            text-shadow: 0 0 5px rgba(138, 180, 255, 0.2);
-            letter-spacing: 0.01em;
-        }
-        50% {
-            text-shadow: 0 0 15px rgba(138, 180, 255, 0.4);
-            letter-spacing: 0.02em;
-        }
-        100% {
-            text-shadow: 0 0 5px rgba(138, 180, 255, 0.2);
-            letter-spacing: 0.01em;
-        }
-    }
-    /* Heart animations for mobile */
-    .brand-name::before {
-        animation: heart-beat-blue 3s infinite;
-    }
+.nav-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+}
 
-    .brand-name::after {
-        animation: heart-beat-red 3s infinite 1.5s;
-    }
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 8px 0;
+}
 
-    @keyframes heart-beat-blue {
-        0% {
-            transform: translateY(-50%) scale(1);
-        }
-        25% {
-            transform: translateY(-50%) scale(1.2) rotate(-5deg);
-            filter: drop-shadow(0 0 12px rgba(138, 180, 255, 0.8));
-        }
-        50% {
-            transform: translateY(-50%) scale(1);
-        }
-        100% {
-            transform: translateY(-50%) scale(1);
-        }
-    }
-    @keyframes heart-beat-red {
-        0% {
-            transform: translateY(-50%) scale(1);
-        }
-        25% {
-            transform: translateY(-50%) scale(1.2) rotate(5deg);
-            filter: drop-shadow(0 0 12px rgba(255, 138, 138, 0.8));
-        }
-        50% {
-            transform: translateY(-50%) scale(1);
-        }
-        100% {
-            transform: translateY(-50%) scale(1);
-        }
-    }
+.nav-item i {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
 
-    /* Active state for buttons on mobile */
-    .btn:active {
-        background-color: rgba(138, 180, 255, 0.4);
-        transform: translateY(2px);
-        box-shadow: 0 0 15px rgba(138, 180, 255, 0.3);
-    }
+.nav-item span {
+    font-size: 0.75rem;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+}
 
-    /* Entry item for mobile */
-    .entry-item {
-        border-left: 3px solid transparent;
-        border-image: linear-gradient(to bottom, #8ab4ff, #ff8a8a) 1;
-        transform: translateX(3px);
-        animation: entry-pulse 4s infinite;
-    }
+.nav-item.active {
+    color: #ff8a8a; /* Use the same pink accent as elsewhere in your design */
+}
 
-    .entry-item::before {
-        display: none; /* Remove the hover gradient for mobile */
-    }
-    @keyframes entry-pulse {
-        0% {
-            background-color: rgba(0, 0, 0, 0.2);
-        }
-        50% {
-            background-color: rgba(138, 180, 255, 0.1);
-        }
-        100% {
-            background-color: rgba(0, 0, 0, 0.2);
-        }
-    }
-    
-    /* Active state for entry items on mobile */
-    .entry-item:active {
-        transform: translateX(8px);
-        background-color: rgba(138, 180, 255, 0.2);
-    }
+.nav-item.active i {
+    filter: drop-shadow(0 0 8px rgba(255, 138, 138, 0.7));
+}
 
-    /* Modal button for mobile */
-    .modal-btn {
-        position: relative;
-        overflow: hidden;
-        padding-left: 40px;
-    }
-    
-    .modal-btn::before {
-        content: "❤";
-        position: absolute;
-        top: 50%;
-        left: 15px;
-        transform: translateY(-50%);
-        font-size: 16px;
-        color: #ff8a8a;
-        animation: modal-btn-pulse 2s infinite;
-    }
-    
-    @keyframes modal-btn-pulse {
-        0% {
-            transform: translateY(-50%) scale(1);
-        }
-        50% {
-            transform: translateY(-50%) scale(1.2);
-            filter: drop-shadow(0 0 8px rgba(255, 138, 138, 0.8));
-        }
-        100% {
-            transform: translateY(-50%) scale(1);
-        }
-    }
-
-    /* Active state for modal button on mobile */
-    .modal-btn:active {
-        background-color: rgba(255, 255, 255, 0.2);
-        transform: translateY(2px);
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-        border-color: rgba(255, 255, 255, 0.9);
-    }
+.nav-item:hover, .nav-item:active {
+    color: #8ab4ff; /* Use the blue accent from your design */
 }
 
 /* Pulse animations for hearts */
@@ -734,6 +643,25 @@ textarea:focus {
     }
 }
 
+/* Heart animation for the comfort nav item */
+@keyframes heart-beat {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+        filter: drop-shadow(0 0 8px rgba(255, 138, 138, 0.8));
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.nav-item:nth-child(4) i {
+    animation: heart-beat 2s infinite;
+    color: #ff8a8a;
+}
+
 /* Tablet responsive styles */
 @media (max-width: 900px) {
     .main-content,
@@ -754,6 +682,7 @@ textarea:focus {
         font-size: 3.5rem;
         padding: 0 40px;
         margin: 0 30px;
+        line-height: 4.5rem;
     }
     
     .brand-name::before,
@@ -777,14 +706,24 @@ textarea:focus {
         font-size: 16px;
     }
     
+    .mobile-nav {
+        display: block; /* Show on mobile */
+    }
+    
+    /* Make room for the fixed navbar at the bottom */
+    .container {
+        padding-bottom: 70px; 
+    }
+    
     .header {
         padding: 15px 0;
     }
     
     .brand-name {
-        font-size: 3.0rem;
-        padding: 0 20px;
+        font-size: 3.3rem;
+        padding: 0 15px;
         line-height: 1.2;
+        margin-bottom: 10px;
     }
     
     .brand-name::before {
@@ -824,10 +763,24 @@ textarea:focus {
         font-size: 1.8rem;
     }
     
-    /* Stack secondary buttons on mobile */
+    /* Hide secondary buttons on main page since they're in the navbar */
     .secondary-buttons {
-        flex-direction: column;
-        gap: 10px;
+        display: none;
+    }
+    
+    /* Keep the save button only */
+    .button-group {
+        flex-direction: row;
+    }
+    
+    /* Adjust saved entries to be more compact */
+    .saved-entries {
+        padding: 25px;
+    }
+    
+    /* Make the textarea slightly smaller to fit better */
+    textarea {
+        min-height: 150px;
     }
 }
 
@@ -841,5 +794,163 @@ textarea:focus {
     .brand-name::before,
     .brand-name::after {
         font-size: 1.8rem;
+    }
+    
+    .nav-item i {
+        font-size: 1.1rem;
+    }
+    
+    .nav-item span {
+        font-size: 0.7rem;
+    }
+}
+
+/* For mobile devices with touch screens */
+@media (hover: none) and (pointer: coarse) {
+    /* Brand name effect for mobile */
+    .brand-name {
+        background: linear-gradient(45deg, #c1d6ff, #ffffff, #ffc1c1);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: brand-pulse 3s infinite;
+    }
+
+    @keyframes brand-pulse {
+        0% {
+            text-shadow: 0 0 5px rgba(138, 180, 255, 0.2);
+            letter-spacing: 0.01em;
+        }
+        50% {
+            text-shadow: 0 0 15px rgba(138, 180, 255, 0.4);
+            letter-spacing: 0.02em;
+        }
+        100% {
+            text-shadow: 0 0 5px rgba(138, 180, 255, 0.2);
+            letter-spacing: 0.01em;
+        }
+    }
+    
+    /* Heart animations for mobile */
+    .brand-name::before {
+        animation: heart-beat-blue 3s infinite;
+    }
+
+    .brand-name::after {
+        animation: heart-beat-red 3s infinite 1.5s;
+    }
+
+    @keyframes heart-beat-blue {
+        0% {
+            transform: translateY(-50%) scale(1);
+        }
+        25% {
+            transform: translateY(-50%) scale(1.2) rotate(-5deg);
+            filter: drop-shadow(0 0 12px rgba(138, 180, 255, 0.8));
+        }
+        50% {
+            transform: translateY(-50%) scale(1);
+        }
+        100% {
+            transform: translateY(-50%) scale(1);
+        }
+    }
+    
+    @keyframes heart-beat-red {
+        0% {
+            transform: translateY(-50%) scale(1);
+        }
+        25% {
+            transform: translateY(-50%) scale(1.2) rotate(5deg);
+            filter: drop-shadow(0 0 12px rgba(255, 138, 138, 0.8));
+        }
+        50% {
+            transform: translateY(-50%) scale(1);
+        }
+        100% {
+            transform: translateY(-50%) scale(1);
+        }
+    }
+
+    /* Active state for buttons on mobile */
+    .btn:active {
+        background-color: rgba(138, 180, 255, 0.4);
+        transform: translateY(2px);
+        box-shadow: 0 0 15px rgba(138, 180, 255, 0.3);
+    }
+
+    /* Entry item for mobile */
+    .entry-item {
+        border-left: 3px solid transparent;
+        border-image: linear-gradient(to bottom, #8ab4ff, #ff8a8a) 1;
+        transform: translateX(3px);
+        animation: entry-pulse 4s infinite;
+    }
+
+    .entry-item::before {
+        display: none; /* Remove the hover gradient for mobile */
+    }
+    
+    @keyframes entry-pulse {
+        0% {
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+        50% {
+            background-color: rgba(138, 180, 255, 0.1);
+        }
+        100% {
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+    }
+    
+    /* Active state for entry items on mobile */
+    .entry-item:active {
+        transform: translateX(8px);
+        background-color: rgba(138, 180, 255, 0.2);
+    }
+    
+    /* Mobile nav items active state */
+    .nav-item:active {
+        transform: scale(1.1);
+        color: #8ab4ff;
+    }
+
+    /* Modal button for mobile */
+    .modal-btn {
+        position: relative;
+        overflow: hidden;
+        padding-left: 40px;
+    }
+    
+    .modal-btn::before {
+        content: "❤";
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        transform: translateY(-50%);
+        font-size: 16px;
+        color: #ff8a8a;
+        animation: modal-btn-pulse 2s infinite;
+    }
+    
+    @keyframes modal-btn-pulse {
+        0% {
+            transform: translateY(-50%) scale(1);
+        }
+        50% {
+            transform: translateY(-50%) scale(1.2);
+            filter: drop-shadow(0 0 8px rgba(255, 138, 138, 0.8));
+        }
+        100% {
+            transform: translateY(-50%) scale(1);
+        }
+    }
+
+    /* Active state for modal button on mobile */
+    .modal-btn:active {
+        background-color: rgba(255, 255, 255, 0.2);
+        transform: translateY(2px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        border-color: rgba(255, 255, 255, 0.9);
     }
 }
