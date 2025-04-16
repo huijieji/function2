@@ -388,7 +388,7 @@ textarea:focus {
     left: 0;
     width: 3px;
     height: 0;
-    background: linear-gradient(to bottom, #8ab4ff, #88e0f8;);
+    background: linear-gradient(to bottom, #8ab4ff, #88e0f8);
     transition: height 0.4s ease;
 }
 
@@ -565,7 +565,7 @@ textarea:focus {
 @media (hover: none) and (pointer: coarse) {
     /* Brand name effect for mobile */
     .brand-name {
-        background: linear-gradient(45deg, #c1d6ff, #ffffff, #ffc1c1);
+        background: linear-gradient(45deg, #c1d6ff, #ffffff, #88e0f8);
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -637,7 +637,7 @@ textarea:focus {
     /* Entry item for mobile */
     .entry-item {
         border-left: 3px solid transparent;
-        border-image: linear-gradient(to bottom, #8ab4ff, #ff8a8a) 1;
+        border-image: linear-gradient(to bottom, #8ab4ff,#88e0f8) 1;
         transform: translateX(3px);
         animation: entry-pulse 4s infinite;
     }
@@ -851,5 +851,4 @@ textarea:focus {
     #entry-list {
         scroll-margin-top: 100px;
     }
-
 }
