@@ -837,7 +837,6 @@ textarea:focus {
 @media (max-width: 400px) {
     .brand-name {
         font-size: 3.9rem;
-        /* padding: 10 10px; */
         padding-bottom:60px;
         padding-top:30px;
         line-height: 4.5rem;
