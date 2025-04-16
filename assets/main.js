@@ -223,7 +223,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Get a random quote
 // Returns a random quote — fallback if quoteDatabase is missing
-// I added this so the app will not break even if the quote data fails to load
+// I added this so the mobile or website will not break even if the quote data fails to load
 // Learned about Math.random() and array indexing to safely get a random item
     function getRandomQuote() {
         if (typeof quoteDatabase !== 'undefined' && Array.isArray(quoteDatabase)) {
@@ -539,4 +539,4 @@ document.addEventListener('DOMContentLoaded', function() {
             closeModal(event.target);
         }
     };
-});
+}); 

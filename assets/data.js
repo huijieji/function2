@@ -124,7 +124,6 @@ const songDatabase = [
         keywords: ["hurt", "pain", "sorry", "christina aguilera", "apology", "regret", "too late"]
     },
     
-    // 额外添加的歌曲
     {
         title: "Rolling in the Deep",
         artist: "Adele",

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Quicksand:wght@300;400;500&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
 
 /* Reset styles */
 * {
@@ -249,14 +250,26 @@ textarea:focus {
     box-shadow: 0 0 15px rgba(138, 180, 255, 0.3);
 }
 
-/* Button group container */
+/* Button group container with updated layout */
 .button-group {
     display: flex;
+    flex-direction: column;
     gap: 15px;
-    flex-wrap: wrap;
 }
 
-/* Button styling with heart animation */
+/* Container for secondary buttons */
+.secondary-buttons {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+}
+
+/* Each secondary button takes equal width */
+.secondary-buttons .btn {
+    flex: 1;
+}
+
+/* Button styling with icon */
 .btn {
     padding: 14px 20px;
     font-size: 0.95rem;
@@ -264,46 +277,53 @@ textarea:focus {
     transition: all 0.4s ease;
     font-weight: 500;
     font-family: 'Montserrat', sans-serif;
-    background: transparent;
-    border: 1px solid #fff;
+    background-color: rgba(138, 180, 255, 0.2);
+    border: 1px solid #8ab4ff;
     color: #fff;
     text-transform: uppercase;
     letter-spacing: 0.12em;
     text-align: center;
-    flex: 1;
     min-width: 140px;
     border-radius: 8px;
     position: relative;
     overflow: hidden;
-}
-
-/* Heart icon for button hover effect */
-.btn::before {
-    content: "❤";
-    position: absolute;
-    opacity: 0;
-    top: 50%;
-    left: -20px;
-    transform: translateY(-50%);
-    font-size: 0;
-    color: #8ab4ff;
-    transition: all 0.3s ease;
+    padding-left: 40px; /* Space for icon */
+    box-shadow: 0 0 15px rgba(138, 180, 255, 0.3);
 }
 
 /* Button hover state */
 .btn:hover {
-    background-color: rgba(138, 180, 255, 0.15);
-    border-color: #8ab4ff;
-    padding-left: 35px;
-    box-shadow: 0 0 15px rgba(138, 180, 255, 0.3);
+    background-color: rgba(138, 180, 255, 0.3);
     transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(138, 180, 255, 0.4);
 }
 
-/* Button hover heart animation */
-.btn:hover::before {
-    opacity: 1;
+/* Button icons styling */
+.btn::before {
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
     left: 15px;
-    font-size: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    color: #ffffff;
+}
+
+/* Save button icon */
+.btn#saveBtn::before {
+    content: "\f0c7"; /* save icon */
+}
+
+/* Release button icon */
+.btn#releaseBtn::before {
+    content: "\f06e"; /* eye icon */
+}
+
+/* Comfort button icon */
+.btn#comfortBtn::before {
+    content: "\f004"; /* heart icon */
 }
 
 /* Button active state */
@@ -567,98 +587,65 @@ textarea:focus {
             letter-spacing: 0.01em;
         }
     }
-/* Heart animations for mobile */
-.brand-name::before {
-    animation: heart-beat-blue 3s infinite;
-}
+    /* Heart animations for mobile */
+    .brand-name::before {
+        animation: heart-beat-blue 3s infinite;
+    }
 
-.brand-name::after {
-    animation: heart-beat-red 3s infinite 1.5s;
-}
+    .brand-name::after {
+        animation: heart-beat-red 3s infinite 1.5s;
+    }
 
-@keyframes heart-beat-blue {
-    0% {
-        transform: translateY(-50%) scale(1);
+    @keyframes heart-beat-blue {
+        0% {
+            transform: translateY(-50%) scale(1);
+        }
+        25% {
+            transform: translateY(-50%) scale(1.2) rotate(-5deg);
+            filter: drop-shadow(0 0 12px rgba(138, 180, 255, 0.8));
+        }
+        50% {
+            transform: translateY(-50%) scale(1);
+        }
+        100% {
+            transform: translateY(-50%) scale(1);
+        }
     }
-    25% {
-        transform: translateY(-50%) scale(1.2) rotate(-5deg);
-        filter: drop-shadow(0 0 12px rgba(138, 180, 255, 0.8));
+    @keyframes heart-beat-red {
+        0% {
+            transform: translateY(-50%) scale(1);
+        }
+        25% {
+            transform: translateY(-50%) scale(1.2) rotate(5deg);
+            filter: drop-shadow(0 0 12px rgba(255, 138, 138, 0.8));
+        }
+        50% {
+            transform: translateY(-50%) scale(1);
+        }
+        100% {
+            transform: translateY(-50%) scale(1);
+        }
     }
-    50% {
-        transform: translateY(-50%) scale(1);
-    }
-    100% {
-        transform: translateY(-50%) scale(1);
-    }
-}
-@keyframes heart-beat-red {
-    0% {
-        transform: translateY(-50%) scale(1);
-    }
-    25% {
-        transform: translateY(-50%) scale(1.2) rotate(5deg);
-        filter: drop-shadow(0 0 12px rgba(255, 138, 138, 0.8));
-    }
-    50% {
-        transform: translateY(-50%) scale(1);
-    }
-    100% {
-        transform: translateY(-50%) scale(1);
-    }
-}
 
- /* Button effect for mobile */
- .btn {
-    position: relative;
-    overflow: hidden;
-    padding-left: 35px;
-}
-
-.btn::before {
-    content: "❤";
-    position: absolute;
-    opacity: 1;
-    top: 50%;
-    left: 15px;
-    transform: translateY(-50%);
-    font-size: 14px;
-    color: #8ab4ff;
-    animation: btn-heart-pulse 2s infinite;
-}
-
-@keyframes btn-heart-pulse {
-    0% {
-        transform: translateY(-50%) scale(1);
+    /* Active state for buttons on mobile */
+    .btn:active {
+        background-color: rgba(138, 180, 255, 0.4);
+        transform: translateY(2px);
+        box-shadow: 0 0 15px rgba(138, 180, 255, 0.3);
     }
-    50% {
-        transform: translateY(-50%) scale(1.2);
-        filter: drop-shadow(0 0 8px rgba(138, 180, 255, 0.8));
+
+    /* Entry item for mobile */
+    .entry-item {
+        border-left: 3px solid transparent;
+        border-image: linear-gradient(to bottom, #8ab4ff, #ff8a8a) 1;
+        transform: translateX(3px);
+        animation: entry-pulse 4s infinite;
     }
-    100% {
-        transform: translateY(-50%) scale(1);
+
+    .entry-item::before {
+        display: none; /* Remove the hover gradient for mobile */
     }
-}
-
-/* Active state for buttons on mobile */
-.btn:active {
-    background-color: rgba(138, 180, 255, 0.25);
-    border-color: #8ab4ff;
-    transform: translateY(2px);
-    box-shadow: 0 0 15px rgba(138, 180, 255, 0.3);
-}
-
-/* Entry item for mobile */
-.entry-item {
-    border-left: 3px solid transparent;
-    border-image: linear-gradient(to bottom, #8ab4ff, #ff8a8a) 1;
-    transform: translateX(3px);
-    animation: entry-pulse 4s infinite;
-}
-
-.entry-item::before {
-    display: none; /* Remove the hover gradient for mobile */
-}
-  @keyframes entry-pulse {
+    @keyframes entry-pulse {
         0% {
             background-color: rgba(0, 0, 0, 0.2);
         }
@@ -706,44 +693,43 @@ textarea:focus {
         }
     }
 
-/* Active state for modal button on mobile */
+    /* Active state for modal button on mobile */
     .modal-btn:active {
-    background-color: rgba(255, 255, 255, 0.2);
-    transform: translateY(2px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    border-color: rgba(255, 255, 255, 0.9);
-        }
+        background-color: rgba(255, 255, 255, 0.2);
+        transform: translateY(2px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        border-color: rgba(255, 255, 255, 0.9);
     }
-
-/* Button effect for mobile */
-.btn {
-    position: relative;
-    overflow: hidden;
-    padding-left: 35px;
 }
 
-.btn::before {
-    content: "❤";
-    position: absolute;
-    opacity: 1;
-    top: 50%;
-    left: 15px;
-    transform: translateY(-50%);
-    font-size: 14px;
-    color: #8ab4ff;
-    animation: btn-heart-pulse 2s infinite;
-}
-
-@keyframes btn-heart-pulse {
+/* Pulse animations for hearts */
+@keyframes pulse-blue {
     0% {
         transform: translateY(-50%) scale(1);
+        filter: drop-shadow(0 0 5px rgba(138, 180, 255, 0.5));
     }
     50% {
-        transform: translateY(-50%) scale(1.2);
-        filter: drop-shadow(0 0 8px rgba(138, 180, 255, 0.8));
+        transform: translateY(-50%) scale(1.1);
+        filter: drop-shadow(0 0 10px rgba(138, 180, 255, 0.8));
     }
     100% {
         transform: translateY(-50%) scale(1);
+        filter: drop-shadow(0 0 5px rgba(138, 180, 255, 0.5));
+    }
+}
+
+@keyframes pulse-red {
+    0% {
+        transform: translateY(-50%) scale(1);
+        filter: drop-shadow(0 0 5px rgba(255, 138, 138, 0.5));
+    }
+    50% {
+        transform: translateY(-50%) scale(1.1);
+        filter: drop-shadow(0 0 10px rgba(255, 138, 138, 0.8));
+    }
+    100% {
+        transform: translateY(-50%) scale(1);
+        filter: drop-shadow(0 0 5px rgba(255, 138, 138, 0.5));
     }
 }
 
@@ -761,10 +747,6 @@ textarea:focus {
     
     .button-group {
         justify-content: center;
-    }
-    
-    .btn {
-        min-width: 130px;
     }
     
     .brand-name {
@@ -828,12 +810,23 @@ textarea:focus {
     }
     
     .btn {
-        padding: 12px 15px;
+        padding: 12px 15px 12px 35px;
+        font-size: 0.9rem;
+    }
+    
+    .btn::before {
+        left: 12px;
         font-size: 0.9rem;
     }
     
     .main-quote {
         font-size: 1.8rem;
+    }
+    
+    /* Stack secondary buttons on mobile */
+    .secondary-buttons {
+        flex-direction: column;
+        gap: 10px;
     }
 }
 
