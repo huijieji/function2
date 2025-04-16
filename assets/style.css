@@ -148,7 +148,6 @@ html {
     animation: pulse-red 2s infinite 1s; 
 }
 
-
 /* Title effect */
 .brand-name:hover {
     text-shadow: 0 0 20px rgba(138, 180, 255, 0.5);
@@ -219,7 +218,7 @@ html {
     font-family: 'Dancing Script', cursive;
 }
 
-/* Textarea styling */
+/* Text area styling */
 textarea {
     width: 100%;
     min-height: 200px;
@@ -512,7 +511,7 @@ textarea:focus {
     font-weight: 700;
 }
 
-/* modal-quote style */
+/* Modal-quote style */
 .modal-quote {
     font-family: 'Quicksand', sans-serif;
     font-size: 1.5rem;
@@ -534,7 +533,7 @@ textarea:focus {
     font-weight: 600;
 }
 
-/* modal-btn style */
+/* Modal-btn style */
 .modal-btn {
     display: block;
     margin: 0 auto;
@@ -552,7 +551,7 @@ textarea:focus {
     border-radius: 8px;
 }
 
-/* modal-btn hover style */
+/* Modal-btn hover style */
 .modal-btn:hover {
     background-color: rgba(255, 255, 255, 0.15);
     color: #fff;
@@ -562,6 +561,8 @@ textarea:focus {
 }
 
 /* For mobile devices - try to make different than web verison*/
+ /* Mobile interaction best practices from MDN Docs: https://developer.mozilla.org/en-US/docs/Web/CSS/@media */
+ /* Keyframe animation structure learned from CSS-Tricks (css-tricks.com) */
 @media (hover: none) and (pointer: coarse) {
     /* Brand name effect for mobile */
     .brand-name {
@@ -572,7 +573,6 @@ textarea:focus {
         animation: brand-pulse 3s infinite;
     }
 
-    
     @keyframes brand-pulse {
         0% {
             text-shadow: 0 0 5px rgba(138, 180, 255, 0.2);
@@ -587,6 +587,7 @@ textarea:focus {
             letter-spacing: 0.01em;
         }
     }
+
     /* Heart animations for mobile */
     .brand-name::before {
         animation: heart-beat-blue 3s infinite;
@@ -662,6 +663,7 @@ textarea:focus {
         transform: translateX(8px);
         background-color: rgba(138, 180, 255, 0.2);
     }
+
     /* Modal button for mobile */
     .modal-btn {
         position: relative;
@@ -679,7 +681,7 @@ textarea:focus {
         color:#88e0f8;;
         animation: modal-btn-pulse 2s infinite;
     }
-    
+
     @keyframes modal-btn-pulse {
         0% {
             transform: translateY(-50%) scale(1);
