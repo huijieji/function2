@@ -750,7 +750,7 @@ textarea:focus {
     }
     
     .brand-name {
-        font-size: 3.5rem;
+        font-size: 5rem;
         padding: 0 40px;
         margin: 0 30px;
     }
@@ -822,7 +822,7 @@ textarea:focus {
     .main-quote {
         font-size: 1.8rem;
     }
-    
+
     #entry-list {
         scroll-margin-top: 100px;
     }
@@ -840,7 +840,7 @@ textarea:focus {
         /* padding: 10 10px; */
         padding-bottom:60px;
         padding-top:30px;
-        line-height: 5rem;
+        line-height: 4.5rem;
     }
     
     .brand-name::before,
