@@ -540,7 +540,31 @@ textarea:focus {
     border-color: rgba(255, 255, 255, 0.8);
 }
 
-
+/* For mobile devices - try to make different than web verison*/
+@media (hover: none) and (pointer: coarse) {
+    /* Brand name effect for mobile */
+    .brand-name {
+        background: linear-gradient(45deg, #c1d6ff, #ffffff, #ffc1c1);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: brand-pulse 3s infinite;
+    }
+    
+    @keyframes brand-pulse {
+        0% {
+            text-shadow: 0 0 5px rgba(138, 180, 255, 0.2);
+            letter-spacing: 0.01em;
+        }
+        50% {
+            text-shadow: 0 0 15px rgba(138, 180, 255, 0.4);
+            letter-spacing: 0.02em;
+        }
+        100% {
+            text-shadow: 0 0 5px rgba(138, 180, 255, 0.2);
+            letter-spacing: 0.01em;
+        }
+    }
 
 /* Tablet responsive styles */
 @media (max-width: 900px) {
