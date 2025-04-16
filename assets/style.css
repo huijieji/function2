@@ -277,8 +277,8 @@ textarea:focus {
     transition: all 0.4s ease;
     font-weight: 500;
     font-family: 'Montserrat', sans-serif;
-    background-color: rgba(138, 180, 255, 0.2);
-    border: 1px solid #8ab4ff;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid #ffffff;
     color: #fff;
     text-transform: uppercase;
     letter-spacing: 0.12em;
@@ -662,6 +662,7 @@ textarea:focus {
         transform: translateX(8px);
         background-color: rgba(138, 180, 255, 0.2);
     }
+
     /* Modal button for mobile */
     .modal-btn {
         position: relative;
