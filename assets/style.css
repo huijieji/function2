@@ -679,7 +679,7 @@ textarea:focus {
     .modal-btn {
         position: relative;
         overflow: hidden;
-        padding-left: 40px;
+        padding-left: 44px;
     }
     
     .modal-btn::before {
@@ -719,7 +719,7 @@ textarea:focus {
 .btn {
     position: relative;
     overflow: hidden;
-    padding-left: 35px;
+    padding-left: 30px;
 }
 
 .btn::before {
@@ -736,14 +736,14 @@ textarea:focus {
 
 @keyframes btn-heart-pulse {
     0% {
-        transform: translateY(-40%) scale(1);
+        transform: translateY(-50%) scale(1);
     }
     50% {
-        transform: translateY(-40%) scale(1.2);
+        transform: translateY(-50%) scale(1.2);
         filter: drop-shadow(0 0 8px rgba(138, 180, 255, 0.8));
     }
     100% {
-        transform: translateY(-40%) scale(1);
+        transform: translateY(-50%) scale(1);
     }
 }
 
