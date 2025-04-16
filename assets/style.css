@@ -781,7 +781,7 @@ textarea:focus {
     }
     
     .brand-name {
-        font-size: 3.0rem;
+        font-size: 4.0rem;
         padding: 0 20px;
         line-height: 1.2;
     }
@@ -833,8 +833,11 @@ textarea:focus {
 /* Extra small screen adjustments */
 @media (max-width: 400px) {
     .brand-name {
-        font-size: 2.9rem;
-        padding: 0 10px;
+        font-size: 3.9rem;
+        /* padding: 10 10px; */
+        padding-bottom:60px;
+        padding-top:30px;
+        line-height: 5rem;
     }
     
     .brand-name::before,
