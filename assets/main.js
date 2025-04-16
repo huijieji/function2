@@ -89,7 +89,10 @@ document.addEventListener('DOMContentLoaded', function() {
             embedUrl: "https://open.spotify.com/embed/track/1dGr1c8CrMLDpV6mPbImSI?utm_source=generator"
         }
     ];
-    
+    // Delete some songs is not working from spotify, it shows not found on this page
+
+
+
     // Extract keywords from text
     // Learn from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
     // Learn how to: Clean up text with .replace() Split text with .split()Filter arrays with .filter()Search with .includes()
