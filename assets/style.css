@@ -607,6 +607,146 @@ textarea:focus {
     }
 }
 
+ /* Button effect for mobile */
+ .btn {
+    position: relative;
+    overflow: hidden;
+    padding-left: 35px;
+}
+
+.btn::before {
+    content: "❤";
+    position: absolute;
+    opacity: 1;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: #8ab4ff;
+    animation: btn-heart-pulse 2s infinite;
+}
+
+@keyframes btn-heart-pulse {
+    0% {
+        transform: translateY(-50%) scale(1);
+    }
+    50% {
+        transform: translateY(-50%) scale(1.2);
+        filter: drop-shadow(0 0 8px rgba(138, 180, 255, 0.8));
+    }
+    100% {
+        transform: translateY(-50%) scale(1);
+    }
+}
+
+/* Active state for buttons on mobile */
+.btn:active {
+    background-color: rgba(138, 180, 255, 0.25);
+    border-color: #8ab4ff;
+    transform: translateY(2px);
+    box-shadow: 0 0 15px rgba(138, 180, 255, 0.3);
+}
+
+/* Entry item for mobile */
+.entry-item {
+    border-left: 3px solid transparent;
+    border-image: linear-gradient(to bottom, #8ab4ff, #ff8a8a) 1;
+    transform: translateX(3px);
+    animation: entry-pulse 4s infinite;
+}
+
+.entry-item::before {
+    display: none; /* Remove the hover gradient for mobile */
+}
+  @keyframes entry-pulse {
+        0% {
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+        50% {
+            background-color: rgba(138, 180, 255, 0.1);
+        }
+        100% {
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+    }
+    
+    /* Active state for entry items on mobile */
+    .entry-item:active {
+        transform: translateX(8px);
+        background-color: rgba(138, 180, 255, 0.2);
+    }
+    /* Modal button for mobile */
+    .modal-btn {
+        position: relative;
+        overflow: hidden;
+        padding-left: 40px;
+    }
+    
+    .modal-btn::before {
+        content: "❤";
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        transform: translateY(-50%);
+        font-size: 16px;
+        color: #ff8a8a;
+        animation: modal-btn-pulse 2s infinite;
+    }
+    
+    @keyframes modal-btn-pulse {
+        0% {
+            transform: translateY(-50%) scale(1);
+        }
+        50% {
+            transform: translateY(-50%) scale(1.2);
+            filter: drop-shadow(0 0 8px rgba(255, 138, 138, 0.8));
+        }
+        100% {
+            transform: translateY(-50%) scale(1);
+        }
+    }
+    
+/* Active state for modal button on mobile */
+    .modal-btn:active {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.9);
+        }
+    }
+
+/* Button effect for mobile */
+.btn {
+    position: relative;
+    overflow: hidden;
+    padding-left: 35px;
+}
+
+.btn::before {
+    content: "❤";
+    position: absolute;
+    opacity: 1;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: #8ab4ff;
+    animation: btn-heart-pulse 2s infinite;
+}
+
+@keyframes btn-heart-pulse {
+    0% {
+        transform: translateY(-50%) scale(1);
+    }
+    50% {
+        transform: translateY(-50%) scale(1.2);
+        filter: drop-shadow(0 0 8px rgba(138, 180, 255, 0.8));
+    }
+    100% {
+        transform: translateY(-50%) scale(1);
+    }
+}
+
 /* Tablet responsive styles */
 @media (max-width: 900px) {
     .main-content,
