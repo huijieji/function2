@@ -823,6 +823,9 @@ textarea:focus {
         font-size: 1.8rem;
     }
     
+    #entry-list {
+        scroll-margin-top: 100px;
+    }
     /* Stack secondary buttons on mobile */
     .secondary-buttons {
         flex-direction: column;
@@ -844,4 +847,9 @@ textarea:focus {
     .brand-name::after {
         font-size: 1.8rem;
     }
+
+    #entry-list {
+        scroll-margin-top: 100px;
+    }
+
 }
