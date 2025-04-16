@@ -53,16 +53,6 @@ document.addEventListener('DOMContentLoaded', function() {
     //(Sometimes will shows Page not found We can’t seem to find the page you are looking for.
     const GUARANTEED_SONGS = [
         {
-            title: "Someone Like You",
-            artist: "Adele",
-            embedUrl: "https://open.spotify.com/embed/track/4w9XPIPVO3XImZF6FGBVsP?utm_source=generator"
-        },
-        {
-            title: "Rolling in the Deep",
-            artist: "Adele", 
-            embedUrl: "https://open.spotify.com/embed/track/4spkOoVIGKDQmTUykGuwUn?utm_source=generator"
-        },
-        {
             title: "Easy On Me",
             artist: "Adele",
             embedUrl: "https://open.spotify.com/embed/track/0gplL1WMoJ6iYaPgMCL0gX?utm_source=generator"
@@ -77,11 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
             artist: "Ed Sheeran",
             embedUrl: "https://open.spotify.com/embed/track/7qiZfU4dY1lWllzX7mPBI3?utm_source=generator"
         },
-        {
-            title: "Thinking out Loud",
-            artist: "Ed Sheeran",
-            embedUrl: "https://open.spotify.com/embed/track/1Slwb6dOYkBlWal1PGtnNg?utm_source=generator"
-        },
+
         {
             title: "All of Me",
             artist: "John Legend",
