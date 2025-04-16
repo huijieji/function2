@@ -30,17 +30,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const releaseBtn = document.getElementById('releaseBtn'); // "Give me healing tunes" button
     const comfortBtn = document.getElementById('comfortBtn');// "Cheer me up" button
     const heartbreakMessage = document.getElementById('heartbreak-message');// Where you pour your heart out
-    const entryList = document.getElementById('entry-list');
-    const noEntries = document.getElementById('noEntries');
-    const saveModal = document.getElementById('saveModal');
-    const quoteModal = document.getElementById('quoteModal');
-    const musicSection = document.getElementById('music-section');
-    const modalQuote = document.getElementById('modalQuote');
-    const quoteAuthor = document.getElementById('quoteAuthor');
-    const nextQuoteBtn = document.getElementById('nextQuoteBtn');
-    const spotifyPlayer = document.getElementById('spotify-player');
-    const quoteLoading = document.getElementById('quote-loading');
-    const mainQuote = document.getElementById('main-quote');
+    const entryList = document.getElementById('entry-list');// Container showing the list of saved emotional entries
+    const noEntries = document.getElementById('noEntries');// Message shown when there are no saved entries
+    const saveModal = document.getElementById('saveModal');// Modal popup shown after saving an entry
+    const quoteModal = document.getElementById('quoteModal');// Modal popup that displays a motivational quote
+    const musicSection = document.getElementById('music-section');// Section containing the embedded Spotify music player
+    const modalQuote = document.getElementById('modalQuote');// The quote text shown inside the modal
+    const quoteAuthor = document.getElementById('quoteAuthor');// Author of the displayed quote
+    const nextQuoteBtn = document.getElementById('nextQuoteBtn');// Button to load the next quote
+    const spotifyPlayer = document.getElementById('spotify-player');// Spotify player iframe or embed element
+    const quoteLoading = document.getElementById('quote-loading');// Loader shown while a quote is being fetched
+    const mainQuote = document.getElementById('main-quote');// Main quote displayed on the homepage 
     
     // Check if DOM elements loaded correctly
     // Safety check - because sometimes things just do not load right

@@ -540,6 +540,8 @@ textarea:focus {
     border-color: rgba(255, 255, 255, 0.8);
 }
 
+
+
 /* Tablet responsive styles */
 @media (max-width: 900px) {
     .main-content,
