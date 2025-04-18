@@ -150,28 +150,6 @@ document.addEventListener('DOMContentLoaded', function() {
     //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
     //learn about Array.prototype.find() which is the method of Array instances returns the first element in the provided array that satisfies the provided testing function. If no values satisfy the testing function, undefined is returned.
 
-            if (scoredSongs.length > 0 && scoredSongs[0].score > 0) {
-                console.log("Found matching song in database:", scoredSongs[0].title);
-                
-                // Matching guaranteed song (artist or title from database)
-                const matchedGuaranteed = GUARANTEED_SONGS.find(gs => 
-                    gs.title.includes(scoredSongs[0].title) || 
-                    scoredSongs[0].title.includes(gs.title) ||
-                    gs.artist.includes(scoredSongs[0].artist) || 
-                    scoredSongs[0].artist.includes(gs.artist)
-                );
-                
-                if (matchedGuaranteed) {
-                    console.log("Found guaranteed match:", matchedGuaranteed.title);
-                    return matchedGuaranteed;
-                }
-            }
-        } catch (error) {
-            console.error("Error while finding matching song:", error);
-        }
-        
-    return getRandomGuaranteedSong();
-    }
 
 // Get a random quote
 // Returns a random quote — fallback if quoteDatabase is missing
