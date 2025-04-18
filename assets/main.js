@@ -138,32 +138,7 @@ document.addEventListener('DOMContentLoaded', function() {
         return GUARANTEED_SONGS[Math.floor(Math.random() * GUARANTEED_SONGS.length)];
     }
     
-// Finds the most relevant song based on user's keywords
-// I score each song based on keyword matches, sort them, and return the top one
-// Learned how to use .map(), .sort(), and scoring logic for recommendation systems
-    function findMatchingSong(keywords) {
-        // Without keywords, return random guaranteed song
-        if (!keywords || keywords.length === 0) {
-            return getRandomGuaranteedSong();
-        }
-        
-        // Try to find matching song in the database
-        try {
-            // Create scored songs array
-            let scoredSongs = [];
-            
-            // Try to access songDatabase
-            if (typeof songDatabase !== 'undefined' && Array.isArray(songDatabase)) {
-                scoredSongs = songDatabase.map(song => {
-                    let score = 0;
-                    keywords.forEach(keyword => {
-                        if (song.title && song.title.toLowerCase().includes(keyword) || 
-                            song.artist && song.artist.toLowerCase().includes(keyword)) {
-                            score += 5;
-                        }
-                    });
-                    return { ...song, score };
-                });
+
                 
     // Sort by score (highest first)
     // learn from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
