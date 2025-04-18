@@ -162,19 +162,6 @@ document.addEventListener('DOMContentLoaded', function() {
         spotifyPlayer.src = fallbackSong.embedUrl;
     }
 
-                
-    // // Sort by score (highest first)
-    // // learn from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
-    // //The sort() method of Array instances sorts the elements of an array in place and returns the reference to the same array, now sorted. 
-    // scoredSongs.sort((a, b) => b.score - a.score);
-    //    }
-       
-    // // If we found a good match in the data( Try to find the best-scored song by title or artist)
-    // //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
-    // //learn about Array.prototype.find() which is the method of Array instances returns the first element in the provided array that satisfies the provided testing function. If no values satisfy the testing function, undefined is returned.
-
-
-
 // Get a random quote
 // Returns a random quote — fallback if quoteDatabase is missing
 // I added this so the mobile or website will not break even if the quote data fails to load
@@ -377,22 +364,21 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('Save button clicked');
         saveEntry();
     };
-    
-    releaseBtn.onclick = function() {
+
+        releaseBtn.onclick = function() {
         console.log('Release button clicked');
         const text = heartbreakMessage.value;
         const keywords = extractKeywords(text);
         console.log("Extracted keywords for song:", keywords);
         
-        // Find best matching song based on keywords
-        const matchingSong = findMatchingSong(keywords);
-        console.log("Selected song:", matchingSong.title, "by", matchingSong.artist);
         
         // Show the music section
         musicSection.style.display = 'block';
-        
-        // Load the song with embed URL
-        loadSong(matchingSong.embedUrl);
+    
+        // Load random song
+        const randomSong = getRandomSong();
+        console.log("Selected song:", randomSong.title, "by", randomSong.artist);
+        loadSong(randomSong.embedUrl);
     };
     
     comfortBtn.onclick = function() {
