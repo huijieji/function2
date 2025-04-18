@@ -1,44 +1,44 @@
 // Song Database with keyword matching from Sportify.
 // Data generate by Ai for learning purpose.
 
-// Song data
-const SONGS = [
-    {
-        title: "Easy On Me",
-        artist: "Adele",
-        embedUrl: "https://open.spotify.com/embed/track/0gplL1WMoJ6iYaPgMCL0gX?utm_source=generator"
-    },
-    {
-        title: "Flowers",
-        artist: "Miley Cyrus",
-        embedUrl: "https://open.spotify.com/embed/track/0yLdNVWF3Srea0uzk55zFn?utm_source=generator"
-    },
-    {
-        title: "Shape of You",
-        artist: "Ed Sheeran",
-        embedUrl: "https://open.spotify.com/embed/track/7qiZfU4dY1lWllzX7mPBI3?utm_source=generator"
-    },
-    {
-        title: "All of Me",
-        artist: "John Legend",
-        embedUrl: "https://open.spotify.com/embed/track/3U4isOIWM3VvDubwSI3y7a?utm_source=generator"
-    },
-    {
-        title: "Stay With Me",
-        artist: "Sam Smith",
-        embedUrl: "https://open.spotify.com/embed/track/5Nm9ERjJZ5oyfXZTECKmRt?utm_source=generator"
-    },
-    {
-        title: "Blank Space",
-        artist: "Taylor Swift",
-        embedUrl: "https://open.spotify.com/embed/track/1p80LdxRV74UKvL8gnD7ky?utm_source=generator"
-    },
-    {
-        title: "Lover",
-        artist: "Taylor Swift",
-        embedUrl: "https://open.spotify.com/embed/track/1dGr1c8CrMLDpV6mPbImSI?utm_source=generator"
-    }
-];
+// // Song data
+// const SONGS = [
+//     {
+//         title: "Easy On Me",
+//         artist: "Adele",
+//         embedUrl: "https://open.spotify.com/embed/track/0gplL1WMoJ6iYaPgMCL0gX?utm_source=generator"
+//     },
+//     {
+//         title: "Flowers",
+//         artist: "Miley Cyrus",
+//         embedUrl: "https://open.spotify.com/embed/track/0yLdNVWF3Srea0uzk55zFn?utm_source=generator"
+//     },
+//     {
+//         title: "Shape of You",
+//         artist: "Ed Sheeran",
+//         embedUrl: "https://open.spotify.com/embed/track/7qiZfU4dY1lWllzX7mPBI3?utm_source=generator"
+//     },
+//     {
+//         title: "All of Me",
+//         artist: "John Legend",
+//         embedUrl: "https://open.spotify.com/embed/track/3U4isOIWM3VvDubwSI3y7a?utm_source=generator"
+//     },
+//     {
+//         title: "Stay With Me",
+//         artist: "Sam Smith",
+//         embedUrl: "https://open.spotify.com/embed/track/5Nm9ERjJZ5oyfXZTECKmRt?utm_source=generator"
+//     },
+//     {
+//         title: "Blank Space",
+//         artist: "Taylor Swift",
+//         embedUrl: "https://open.spotify.com/embed/track/1p80LdxRV74UKvL8gnD7ky?utm_source=generator"
+//     },
+//     {
+//         title: "Lover",
+//         artist: "Taylor Swift",
+//         embedUrl: "https://open.spotify.com/embed/track/1dGr1c8CrMLDpV6mPbImSI?utm_source=generator"
+//     }
+// ];
 
 // Quote database with keyword matching from BrainyQuote
 const quoteDatabase = [
@@ -143,7 +143,6 @@ const quoteDatabase = [
         keywords: ["alone", "lonely", "yourself", "free time", "enjoy", "self"]
     },
     
-    // 添加更多名言
     {
         text: "The emotion that can break your heart is sometimes the very one that heals it.",
         author: "Nicholas Sparks",
