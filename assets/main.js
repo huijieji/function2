@@ -155,6 +155,12 @@ document.addEventListener('DOMContentLoaded', function() {
             loadFallbackSong();
         };
     }
+      // Load a known working fallback song
+      function loadFallbackSong() {
+        console.log("Loading fallback song");
+        const fallbackSong = getRandomSong();
+        spotifyPlayer.src = fallbackSong.embedUrl;
+    }
 
                 
     // // Sort by score (highest first)
@@ -359,12 +365,12 @@ document.addEventListener('DOMContentLoaded', function() {
     //     };
     // }
     
-    // Load a known working fallback song
-    function loadFallbackSong() {
-        console.log("Loading fallback song");
-        const fallbackSong = getRandomGuaranteedSong();
-        spotifyPlayer.src = fallbackSong.embedUrl;
-    }
+    // // Load a known working fallback song
+    // function loadFallbackSong() {
+    //     console.log("Loading fallback song");
+    //     const fallbackSong = getRandomGuaranteedSong();
+    //     spotifyPlayer.src = fallbackSong.embedUrl;
+    // }
     
     // Event Listeners - using onclick for more stable binding
     saveBtn.onclick = function() {
@@ -487,4 +493,5 @@ document.addEventListener('DOMContentLoaded', function() {
             closeModal(event.target);
         }
     };
+
 }); 
