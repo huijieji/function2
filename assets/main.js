@@ -148,19 +148,21 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         // Try to find matching song in the database
-        try {
-            // Create scored songs array
-            let scoredSongs = [];
-            if (Array.isArray(songDatabase)) {
-                scoredSongs = songDatabase.map(song => {
-                    let score = 0;
-                    keywords.forEach(kw => {
-                        if (song.title?.toLowerCase().includes(kw) || 
+        if (Array.isArray(songDatabase)) {
+            scoredSongs = songDatabase.map(song => {
+                let score = 0;
+                keywords.forEach(kw => {
+                    if (
+                        song.title?.toLowerCase().includes(kw) || 
                         song.artist?.toLowerCase().includes(kw)
                     ) score += 5;
-
-
-                
+                    if (song.keywords?.some(k => k.includes(kw) || kw.includes(k)))
+                        score += 3;
+                });
+                return { ...song, score };
+            });
+        }
+        
     // Sort by score (highest first)
     // learn from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
     //The sort() method of Array instances sorts the elements of an array in place and returns the reference to the same array, now sorted. 
