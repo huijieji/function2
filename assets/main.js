@@ -152,27 +152,11 @@ document.addEventListener('DOMContentLoaded', function() {
             // Create scored songs array
             let scoredSongs = [];
             
-            // Try to access songDatabase
-            if (typeof songDatabase !== 'undefined' && Array.isArray(songDatabase)) {
+            if (Array.isArray(songDatabase)) {
                 scoredSongs = songDatabase.map(song => {
                     let score = 0;
-                    
-                    keywords.forEach(keyword => {
-                        // Check if keyword matches song title or artist
-                        if (song.title && song.title.toLowerCase().includes(keyword) || 
-                            song.artist && song.artist.toLowerCase().includes(keyword)) {
-                            score += 5;
-                        }
-                        
-                        // Check if keyword is in song's keywords
-                        if (song.keywords && Array.isArray(song.keywords) && 
-                            song.keywords.some(k => k.includes(keyword) || keyword.includes(k))) {
-                            score += 3;
-                        }
-                    });
-                    
-                    return { ...song, score };
-                });
+                    keywords.forEach(kw => {
+                        if (
                 
     // Sort by score (highest first)
     // learn from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
