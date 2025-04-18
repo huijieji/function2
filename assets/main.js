@@ -151,12 +151,15 @@ document.addEventListener('DOMContentLoaded', function() {
         try {
             // Create scored songs array
             let scoredSongs = [];
-            
             if (Array.isArray(songDatabase)) {
                 scoredSongs = songDatabase.map(song => {
                     let score = 0;
                     keywords.forEach(kw => {
-                        if (
+                        if (song.title?.toLowerCase().includes(kw) || 
+                        song.artist?.toLowerCase().includes(kw)
+                    ) score += 5;
+
+
                 
     // Sort by score (highest first)
     // learn from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
