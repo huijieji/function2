@@ -145,18 +145,27 @@ document.addEventListener('DOMContentLoaded', function() {
             loadFallbackSong();
             return;
         }
-        
+
         console.log("Loading spotify embed:", embedUrl);
+        spotifyPlayer.src = embedUrl;
+        
+        // Add error handling
+        spotifyPlayer.onerror = function() {
+            console.error("Spotify iframe error detected");
+            loadFallbackSong();
+        };
+    }
+
                 
-    // Sort by score (highest first)
-    // learn from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
-    //The sort() method of Array instances sorts the elements of an array in place and returns the reference to the same array, now sorted. 
-    scoredSongs.sort((a, b) => b.score - a.score);
-       }
+    // // Sort by score (highest first)
+    // // learn from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+    // //The sort() method of Array instances sorts the elements of an array in place and returns the reference to the same array, now sorted. 
+    // scoredSongs.sort((a, b) => b.score - a.score);
+    //    }
        
-    // If we found a good match in the data( Try to find the best-scored song by title or artist)
-    //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
-    //learn about Array.prototype.find() which is the method of Array instances returns the first element in the provided array that satisfies the provided testing function. If no values satisfy the testing function, undefined is returned.
+    // // If we found a good match in the data( Try to find the best-scored song by title or artist)
+    // //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
+    // //learn about Array.prototype.find() which is the method of Array instances returns the first element in the provided array that satisfies the provided testing function. If no values satisfy the testing function, undefined is returned.
 
 
 
@@ -329,26 +338,26 @@ document.addEventListener('DOMContentLoaded', function() {
 // I added an error fallback system here.
 // If the embed URL fails to load, it switches to a guaranteed working song
 
-    // Load a song directly with its embed URL
-    function loadSong(embedUrl) {
-        // Safety checks
-        if (!embedUrl || !spotifyPlayer) {
-            console.error("Cannot load song: Missing embed URL or player element");
-            loadFallbackSong();
-            return;
-        }
+    // // Load a song directly with its embed URL
+    // function loadSong(embedUrl) {
+    //     // Safety checks
+    //     if (!embedUrl || !spotifyPlayer) {
+    //         console.error("Cannot load song: Missing embed URL or player element");
+    //         loadFallbackSong();
+    //         return;
+    //     }
         
-        console.log("Loading spotify embed:", embedUrl);
+    //     console.log("Loading spotify embed:", embedUrl);
         
-        // Set iframe src directly to embed URL
-        spotifyPlayer.src = embedUrl;
+    //     // Set iframe src directly to embed URL
+    //     spotifyPlayer.src = embedUrl;
         
-        // Add error handling
-        spotifyPlayer.onerror = function() {
-            console.error("Spotify iframe error detected");
-            loadFallbackSong();
-        };
-    }
+    //     // Add error handling
+    //     spotifyPlayer.onerror = function() {
+    //         console.error("Spotify iframe error detected");
+    //         loadFallbackSong();
+    //     };
+    // }
     
     // Load a known working fallback song
     function loadFallbackSong() {
