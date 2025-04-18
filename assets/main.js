@@ -134,11 +134,19 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Get a random guaranteed song
-    function getRandomGuaranteedSong() {
+    function getRandomSong() {
         return GUARANTEED_SONGS[Math.floor(Math.random() * GUARANTEED_SONGS.length)];
     }
     
-
+    function loadSong(embedUrl) {
+        // Safety checks
+        if (!embedUrl || !spotifyPlayer) {
+            console.error("Cannot load song: Missing embed URL or player element");
+            loadFallbackSong();
+            return;
+        }
+        
+        console.log("Loading spotify embed:", embedUrl);
                 
     // Sort by score (highest first)
     // learn from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
@@ -149,6 +157,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // If we found a good match in the data( Try to find the best-scored song by title or artist)
     //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
     //learn about Array.prototype.find() which is the method of Array instances returns the first element in the provided array that satisfies the provided testing function. If no values satisfy the testing function, undefined is returned.
+
 
 
 // Get a random quote
