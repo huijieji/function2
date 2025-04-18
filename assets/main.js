@@ -162,7 +162,6 @@ document.addEventListener('DOMContentLoaded', function() {
                             score += 5;
                         }
                     });
-                    
                     return { ...song, score };
                 });
                 
@@ -196,9 +195,6 @@ document.addEventListener('DOMContentLoaded', function() {
             console.error("Error while finding matching song:", error);
         }
         
-
-    // learn about Math.random() from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
-    // Fallback to random guaranteed song
     return getRandomGuaranteedSong();
     }
 

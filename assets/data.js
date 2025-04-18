@@ -1,236 +1,42 @@
 // Song Database with keyword matching from Sportify.
 // Data generate by Ai for learning purpose.
 
-const songDatabase = [
-    // Heartbreak songs
-    {
-        title: "Someone Like You",
-        artist: "Adele",
-        uri: "spotify:track:4w9XPIPVO3XImZF6FGBVsP",
-        keywords: ["miss", "ex", "over", "move on", "past", "adele", "heartbreak", "sad", "lost"]
-    },
-    {
-        title: "Fix You",
-        artist: "Coldplay",
-        uri: "spotify:track:4RCWB3V8V0dignt99LZ8vH",
-        keywords: ["broken", "fix", "help", "support", "healing", "coldplay", "better", "hope"]
-    },
-    {
-        title: "Unbreak My Heart",
-        artist: "Toni Braxton",
-        uri: "spotify:track:6zAiRKvAMlXHxEtyO4yxIO",
-        keywords: ["broken", "heart", "unbreak", "pain", "hurt", "toni braxton", "sad", "crying"]
-    },
-    {
-        title: "Gravity",
-        artist: "Sara Bareilles",
-        uri: "spotify:track:4NwB41BO2wh5eSNwvmH2zQ",
-        keywords: ["pull", "back", "cant", "let go", "toxic", "relationship", "sara bareilles", "stuck"]
-    },
-    {
-        title: "Breathe Me",
-        artist: "Sia",
-        uri: "spotify:track:57bgtoPSgt236HzfBOd8kj",
-        keywords: ["lost", "help", "alone", "sad", "sia", "lonely", "small", "breathing"]
-    },
-    {
-        title: "All Too Well",
-        artist: "Taylor Swift",
-        uri: "spotify:track:4rHZZAmHpZrA3iH5zx8frV",
-        keywords: ["remember", "memories", "past", "taylor swift", "scarf", "fall", "autumn", "miss"]
-    },
-    {
-        title: "Hello",
-        artist: "Adele",
-        uri: "spotify:track:4sPmO7WMQUAf45kwMOtONw",
-        keywords: ["hello", "call", "phone", "adele", "years", "past", "sorry", "miss", "communication"]
-    },
-    {
-        title: "Stay With Me",
-        artist: "Sam Smith",
-        uri: "spotify:track:5Nm9ERjJZ5oyfXZTECKmRt",
-        keywords: ["stay", "leave", "night", "sam smith", "lonely", "alone", "please", "need"]
-    },
-    {
-        title: "Skinny Love",
-        artist: "Bon Iver",
-        uri: "spotify:track:2k0lx0jzfJ2CJEfqsB7gj3",
-        keywords: ["fading", "love", "weak", "bon iver", "dying", "skinny", "end", "patient"]
-    },
-    {
-        title: "Back To Black",
-        artist: "Amy Winehouse",
-        uri: "spotify:track:3GCdLUSnKSMJhs4Tj6CV3s",
-        keywords: ["black", "dark", "depression", "amy winehouse", "gone", "leaving", "alcohol"]
-    },
-    {
-        title: "Irreplaceable",
-        artist: "Beyoncé",
-        uri: "spotify:track:6RX5GhZBrxlkUZKs60shRv",
-        keywords: ["left", "box", "leaving", "beyonce", "replace", "moving on", "strong", "independence"]
-    },
-    {
-        title: "We Are Never Ever Getting Back Together",
-        artist: "Taylor Swift",
-        uri: "spotify:track:5YqltLsjdqFtvqE7Nrysvs",
-        keywords: ["never", "back", "together", "taylor swift", "over", "done", "final", "breakup"]
-    },
-    {
-        title: "I Will Always Love You",
-        artist: "Whitney Houston",
-        uri: "spotify:track:4eHbdreAnSOrDDsFfc4Fpm",
-        keywords: ["always", "love", "forever", "whitney houston", "goodbye", "leaving", "bittersweet"]
-    },
-    {
-        title: "Nothing Compares 2 U",
-        artist: "Sinéad O'Connor",
-        uri: "spotify:track:1alQNyYZQHQScFeyJcswq4",
-        keywords: ["nothing", "compare", "sinead", "missing", "gone", "days", "crying", "tears"]
-    },
-    {
-        title: "Don't Speak",
-        artist: "No Doubt",
-        uri: "spotify:track:6urCAbunOQI9AY13Platqn",
-        keywords: ["silence", "speak", "words", "no doubt", "gwen stefani", "hurt", "real", "ending"]
-    },
-    {
-        title: "Tears Dry On Their Own",
-        artist: "Amy Winehouse",
-        uri: "spotify:track:7MDfN8XCzZJUMvJ0hA8yF9",
-        keywords: ["tears", "cry", "dry", "amy winehouse", "stronger", "moving on", "recovery"]
-    },
-    {
-        title: "Stronger",
-        artist: "Kelly Clarkson",
-        uri: "spotify:track:6v8XH9LRG6ytrMjjXmIx8M",
-        keywords: ["stronger", "kill", "kelly clarkson", "alone", "fighter", "better", "without"]
-    },
-    {
-        title: "Dancing On My Own",
-        artist: "Robyn",
-        uri: "spotify:track:0pxNyJJiL2zX3XlUQqCmAg",
-        keywords: ["dancing", "alone", "corner", "robyn", "watching", "moved on", "new", "see"]
-    },
-    {
-        title: "Praying",
-        artist: "Kesha",
-        uri: "spotify:track:0jdny0dhgjUwoIp5GkqEaA",
-        keywords: ["pray", "hope", "kesha", "forgiveness", "peace", "healing", "better", "abuse"]
-    },
-    {
-        title: "Hurt",
-        artist: "Christina Aguilera",
-        uri: "spotify:track:6CIY8DVjkUhcv4ExVVQniy",
-        keywords: ["hurt", "pain", "sorry", "christina aguilera", "apology", "regret", "too late"]
-    },
-    
-    {
-        title: "Rolling in the Deep",
-        artist: "Adele",
-        uri: "spotify:track:4spkOoVIGKDQmTUykGuwUn",
-        keywords: ["fire", "heart", "soul", "adele", "deep", "feeling", "revenge", "anger"]
-    },
-    {
-        title: "Wrecking Ball",
-        artist: "Miley Cyrus",
-        uri: "spotify:track:2vwlzO0Qp8kfEtzTsCXfyE",
-        keywords: ["wreck", "break", "wall", "miley cyrus", "destroy", "hit", "crash", "love"]
-    },
-    {
-        title: "Drivers License",
-        artist: "Olivia Rodrigo",
-        uri: "spotify:track:5wANPM4fQCJwkGd4rN57mH", 
-        keywords: ["driving", "license", "olivia rodrigo", "past", "memories", "streets", "crying", "blonde"]
-    },
-    {
-        title: "traitor",
-        artist: "Olivia Rodrigo",
-        uri: "spotify:track:5CZ40GBx1sQ9agT82CLQCT",
-        keywords: ["traitor", "cheating", "betrayal", "olivia rodrigo", "trust", "friend", "dating", "hurt"]
-    },
-    {
-        title: "When I Was Your Man",
-        artist: "Bruno Mars",
-        uri: "spotify:track:5fwSHlTEWpluwOM0Sxnh5k",
-        keywords: ["flowers", "dance", "pride", "bruno mars", "regret", "should have", "too late", "marriage"]
-    },
-    {
-        title: "Love Yourself",
-        artist: "Justin Bieber",
-        uri: "spotify:track:1f8zcJPvJKvxAcXg7cKl8u",
-        keywords: ["love yourself", "justin bieber", "sorry", "goodbye", "better", "without", "selfish"]
-    },
-    {
-        title: "Lover",
-        artist: "Taylor Swift",
-        uri: "spotify:track:1dGr1c8CrMLDpV6mPbImSI",
-        keywords: ["lover", "taylor swift", "romance", "forever", "commitment", "blue", "true", "home"]
-    },
-    {
-        title: "Heather",
-        artist: "Conan Gray",
-        uri: "spotify:track:4xqrdfXkTW4T0RauPLv3WA",
-        keywords: ["sweater", "wish", "conan gray", "jealousy", "envy", "want", "her", "love"]
-    },
+// Song data
+const SONGS = [
     {
         title: "Easy On Me",
         artist: "Adele",
-        uri: "spotify:track:0gplL1WMoJ6iYaPgMCL0gX",
-        keywords: ["easy", "adele", "change", "child", "hope", "try", "forgive", "divorce"]
-    },
-    {
-        title: "Happier",
-        artist: "Olivia Rodrigo",
-        uri: "spotify:track:2tGvwE8GcFKwNdAXMnlbfl",
-        keywords: ["happier", "olivia rodrigo", "wish", "girl", "smile", "prettier", "hope", "sad"]
-    },
-    {
-        title: "cardigan",
-        artist: "Taylor Swift",
-        uri: "spotify:track:4R2kfaDFhslZEMJqAFNpdd",
-        keywords: ["cardigan", "taylor swift", "vintage", "memory", "young", "favorite", "return", "lost"]
-    },
-    {
-        title: "Before You Go",
-        artist: "Lewis Capaldi",
-        uri: "spotify:track:2gMXnyrvIjhVBUZwvLZDMP",
-        keywords: ["before", "lewis capaldi", "hard", "help", "sorry", "difficult", "knew", "pain"]
-    },
-    {
-        title: "Lose You To Love Me",
-        artist: "Selena Gomez",
-        uri: "spotify:track:4l0Mvzj72xxOpRrp6h8nHi",
-        keywords: ["lose", "love", "selena gomez", "dance", "fire", "healing", "goodbye", "fast"]
-    },
-    {
-        title: "Glimpse of Us",
-        artist: "Joji",
-        uri: "spotify:track:6xGruZOHLs39ZbVccQTuPZ",
-        keywords: ["glimpse", "joji", "memory", "compare", "new", "relationship", "past", "love"]
-    },
-    {
-        title: "All of Me",
-        artist: "John Legend",
-        uri: "spotify:track:3U4isOIWM3VvDubwSI3y7a",
-        keywords: ["all", "john legend", "curves", "edges", "perfect", "love", "give", "song"]
-    },
-    {
-        title: "abcdefu",
-        artist: "GAYLE",
-        uri: "spotify:track:4fouWK6XVHhzl78KzQ1UjL",
-        keywords: ["abcdefu", "gayle", "mom", "dad", "anger", "friends", "car", "forget"]
-    },
-    {
-        title: "exile",
-        artist: "Taylor Swift ft. Bon Iver",
-        uri: "spotify:track:4pvb0WLRcMtbPGmtejJJ6y",
-        keywords: ["exile", "taylor swift", "bon iver", "seen", "movie", "not", "hero", "rules"]
+        embedUrl: "https://open.spotify.com/embed/track/0gplL1WMoJ6iYaPgMCL0gX?utm_source=generator"
     },
     {
         title: "Flowers",
         artist: "Miley Cyrus",
-        uri: "spotify:track:4S5NVvo1g1ZLxPp2sE5k3B",
-        keywords: ["flowers", "miley cyrus", "self-love", "independence", "love myself", "better", "alone", "strong"]
+        embedUrl: "https://open.spotify.com/embed/track/0yLdNVWF3Srea0uzk55zFn?utm_source=generator"
+    },
+    {
+        title: "Shape of You",
+        artist: "Ed Sheeran",
+        embedUrl: "https://open.spotify.com/embed/track/7qiZfU4dY1lWllzX7mPBI3?utm_source=generator"
+    },
+    {
+        title: "All of Me",
+        artist: "John Legend",
+        embedUrl: "https://open.spotify.com/embed/track/3U4isOIWM3VvDubwSI3y7a?utm_source=generator"
+    },
+    {
+        title: "Stay With Me",
+        artist: "Sam Smith",
+        embedUrl: "https://open.spotify.com/embed/track/5Nm9ERjJZ5oyfXZTECKmRt?utm_source=generator"
+    },
+    {
+        title: "Blank Space",
+        artist: "Taylor Swift",
+        embedUrl: "https://open.spotify.com/embed/track/1p80LdxRV74UKvL8gnD7ky?utm_source=generator"
+    },
+    {
+        title: "Lover",
+        artist: "Taylor Swift",
+        embedUrl: "https://open.spotify.com/embed/track/1dGr1c8CrMLDpV6mPbImSI?utm_source=generator"
     }
 ];
 
