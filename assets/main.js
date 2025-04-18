@@ -91,8 +91,6 @@ document.addEventListener('DOMContentLoaded', function() {
     ];
     // Delete some songs is not working from spotify, it shows not found on this page
 
-
-
     // Extract keywords from text
     // Learn from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
     // Learn how to: Clean up text with .replace() Split text with .split()Filter arrays with .filter()Search with .includes()
@@ -326,38 +324,6 @@ document.addEventListener('DOMContentLoaded', function() {
         modal.style.display = 'none';
     }
 
-
-// This part dynamically sets the Spotify iframe to the selected song
-// I added an error fallback system here.
-// If the embed URL fails to load, it switches to a guaranteed working song
-
-    // // Load a song directly with its embed URL
-    // function loadSong(embedUrl) {
-    //     // Safety checks
-    //     if (!embedUrl || !spotifyPlayer) {
-    //         console.error("Cannot load song: Missing embed URL or player element");
-    //         loadFallbackSong();
-    //         return;
-    //     }
-        
-    //     console.log("Loading spotify embed:", embedUrl);
-        
-    //     // Set iframe src directly to embed URL
-    //     spotifyPlayer.src = embedUrl;
-        
-    //     // Add error handling
-    //     spotifyPlayer.onerror = function() {
-    //         console.error("Spotify iframe error detected");
-    //         loadFallbackSong();
-    //     };
-    // }
-    
-    // // Load a known working fallback song
-    // function loadFallbackSong() {
-    //     console.log("Loading fallback song");
-    //     const fallbackSong = getRandomGuaranteedSong();
-    //     spotifyPlayer.src = fallbackSong.embedUrl;
-    // }
     
     // Event Listeners - using onclick for more stable binding
     saveBtn.onclick = function() {
