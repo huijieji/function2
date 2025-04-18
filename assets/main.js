@@ -381,7 +381,7 @@ document.addEventListener('DOMContentLoaded', function() {
         loadSong(randomSong.embedUrl);
     };
     
-    comfortBtn.onclick = function() {
+        comfortBtn.onclick = function() {
         console.log('Comfort button clicked');
         const text = heartbreakMessage.value;
         const keywords = extractKeywords(text);
@@ -479,5 +479,4 @@ document.addEventListener('DOMContentLoaded', function() {
             closeModal(event.target);
         }
     };
-
 }); 
