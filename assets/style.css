@@ -129,7 +129,7 @@ html {
     filter: drop-shadow(0 0 8px rgba(138, 180, 255, 0.8));
     transition: all 0.5s ease;
     left: 5px;
-    color:#94adf9;
+    color: #8ab4ff;
     animation: pulse-blue 2s infinite;
 }
 
@@ -144,7 +144,7 @@ html {
     filter: drop-shadow(0 0 8px rgba(138, 180, 255, 0.8));
     transition: all 0.5s ease;
     right: 5px;
-    color: #94adf9;
+    color: #88cdf8;
     animation: pulse-red 2s infinite 1s; 
 }
 
